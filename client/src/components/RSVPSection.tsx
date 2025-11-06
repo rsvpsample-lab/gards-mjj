@@ -53,25 +53,28 @@ const RSVPSection = () => {
                 Your presence would make our day complete
               </p>
               <p className="text-xl font-script italic text-foreground/90 leading-relaxed" data-testid="text-rsvp-details">
-                Please fill out the form below to confirm your attendance. 
+                Please click the button below to confirm your attendance. 
                 We're excited to celebrate this special moment with you!
               </p>
             </div>
 
-            {/* Google Form Embed */}
+            {/* RSVP Button */}
             <div className="w-full flex justify-center mb-8">
-              <iframe 
-                src="https://docs.google.com/forms/d/e/1FAIpQLSc6LkNhRgf37tVp6eXJsd95S0Yie5bP9WcaoL416Y16bHZlLQ/viewform?embedded=true" 
-                width="640" 
-                height="847" 
-                frameBorder="0" 
-                marginHeight={0} 
-                marginWidth={0}
-                className="max-w-full border border-border rounded-lg shadow-lg"
-                title="Wedding RSVP Form"
+              <a 
+                href="https://gards-mj-rsvp.replit.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="button-rsvp"
               >
-                Loading…
-              </iframe>
+                <button className="animated-rsvp-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span>RSVP Now</span>
+                </button>
+              </a>
             </div>
 
             {/* Decorative Elements */}
