@@ -1,235 +1,171 @@
 import { motion } from 'framer-motion';
-import prenup1 from '@assets/groomm_1762335551902.jpg';
-import prenup2 from '@assets/couple_1762335544511.jpg';
-import prenup3 from '@assets/bride_1762335540308.jpg';
-import monogram from '../assets/I&R-monogram.png';
-
-import MONOGRAM_removebg_preview from "@assets/MONOGRAM-removebg-preview.png";
+import prenupPhoto from '@assets/prenup1_1762420085164.jpg';
 
 interface RusticInvitationRevealProps {
   animationsEnabled: boolean;
 }
 
 const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealProps) => {
-  const polaroids = [
-    { src: prenup1, alt: 'Groom', rotation: -8 },
-    { src: prenup2, alt: 'Couple', rotation: 2 },
-    { src: prenup3, alt: 'Bride', rotation: -5 }
-  ];
+  const scrollToRSVP = () => {
+    const rsvpSection = document.getElementById('rsvp');
+    if (rsvpSection) {
+      const navHeight = 64;
+      const elementTop = rsvpSection.offsetTop - navHeight;
+      window.scrollTo({
+        top: Math.max(0, elementTop),
+        behavior: 'smooth'
+      });
+    }
+  };
 
   return (
-    <div className="relative flex flex-col items-center justify-center min-h-screen py-12 px-4">
-      {/* Rustic Wood Background Element */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <svg className="w-full h-full" preserveAspectRatio="none">
-          <defs>
-            <pattern id="woodgrain" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-              <line x1="0" y1="0" x2="0" y2="100" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
-              <line x1="20" y1="0" x2="20" y2="100" stroke="currentColor" strokeWidth="0.3" opacity="0.2"/>
-              <line x1="40" y1="0" x2="40" y2="100" stroke="currentColor" strokeWidth="0.4" opacity="0.25"/>
-              <line x1="60" y1="0" x2="60" y2="100" stroke="currentColor" strokeWidth="0.3" opacity="0.2"/>
-              <line x1="80" y1="0" x2="80" y2="100" stroke="currentColor" strokeWidth="0.5" opacity="0.3"/>
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#woodgrain)"/>
-        </svg>
+    <div className="relative flex items-center justify-center min-h-screen py-16 px-4">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"/>
       </div>
-      {/* Twine/String across top */}
-      <div
-        className="absolute top-32 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/40 to-transparent"
-        style={{ transformOrigin: 'center' }}
+
+      {/* Main invitation card */}
+      <motion.div
+        className="relative z-10 max-w-5xl w-full bg-gradient-to-br from-amber-50/90 via-white to-amber-50/90 rounded-3xl shadow-2xl overflow-hidden border-4 border-primary/20"
+        initial={animationsEnabled ? { opacity: 0, y: 50 } : { opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={animationsEnabled ? { duration: 1, delay: 0.5 } : { duration: 0 }}
+        data-testid="invitation-card"
       >
-        <div className="absolute inset-0 shadow-lg" style={{ 
-          boxShadow: '0 2px 4px rgba(0,0,0,0.2)' 
-        }}/>
-      </div>
-      {/* Polaroid Photos */}
-      <div className="relative z-10 mb-16 flex flex-wrap items-center justify-center gap-6 max-w-5xl">
-        {polaroids.map((polaroid, index) => (
-        <div
-          key={index}
-          className="relative group"
-          style={{ 
-            transform: `rotate(${polaroid.rotation}deg)` 
-          }}
-          data-testid={`polaroid-${index}`}
-        >
-          {/* Clip/Pin on top of polaroid */}
-          <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
-            <svg width="30" height="35" viewBox="0 0 30 35" className="drop-shadow-md">
-              <path 
-                d="M15,5 L10,0 L5,5 L5,15 Q5,20 7,22 L15,30 L23,22 Q25,20 25,15 L25,5 L20,0 Z" 
-                fill="#8B7355"
-                stroke="#5D4E37"
-                strokeWidth="1"
+        <div className="grid md:grid-cols-2 gap-0">
+          {/* Left side - Photo with decorative frame */}
+          <div className="relative p-8 md:p-12 flex items-center justify-center bg-gradient-to-br from-amber-100/50 to-white/50">
+            <div className="relative">
+              {/* Decorative frame border */}
+              <div className="absolute -inset-4 border-4 border-primary/30 rounded-lg" 
+                   style={{
+                     background: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(139,115,85,0.1) 10px, rgba(139,115,85,0.1) 20px)'
+                   }}
               />
-              <circle cx="15" cy="12" r="3" fill="#5D4E37"/>
-            </svg>
-          </div>
-
-          {/* Polaroid Frame */}
-          <div 
-            className="bg-white p-3 pb-12 shadow-2xl transform hover:scale-105 transition-transform duration-300"
-            style={{
-              boxShadow: '0 10px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,0,0,0.1)'
-            }}
-          >
-            <div className="relative overflow-hidden bg-gray-100" style={{ width: '220px', height: '220px' }}>
-              <img
-                src={polaroid.src}
-                alt={polaroid.alt}
-                className="w-full h-full object-cover"
-              />
-              {/* Vintage photo effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-amber-100/20 via-transparent to-amber-900/10 pointer-events-none mix-blend-overlay"/>
-            </div>
-
-            {/* Handwritten-style caption */}
-            <div className="mt-4 text-center">
-              <p 
-                className="text-gray-600 italic text-[18px]"
-                style={{ fontFamily: 'Brush Script MT, cursive' }}
+              
+              {/* Photo frame */}
+              <div className="relative bg-white p-4 shadow-xl rounded-lg transform hover:scale-105 transition-transform duration-300"
+                   style={{
+                     boxShadow: '0 10px 40px rgba(0,0,0,0.2), inset 0 0 20px rgba(255,248,220,0.5)'
+                   }}
               >
-                {polaroid.alt}
-              </p>
+                <div className="relative overflow-hidden rounded-md">
+                  <img
+                    src={prenupPhoto}
+                    alt="Gards & Mj"
+                    className="w-full h-auto object-cover"
+                    style={{ maxWidth: '400px' }}
+                    data-testid="invitation-photo"
+                  />
+                  {/* Subtle photo effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-amber-100/10 via-transparent to-amber-900/10 pointer-events-none"/>
+                </div>
+              </div>
+
+              {/* Corner decorations */}
+              <div className="absolute -top-2 -left-2 w-6 h-6 border-l-2 border-t-2 border-primary"/>
+              <div className="absolute -top-2 -right-2 w-6 h-6 border-r-2 border-t-2 border-primary"/>
+              <div className="absolute -bottom-2 -left-2 w-6 h-6 border-l-2 border-b-2 border-primary"/>
+              <div className="absolute -bottom-2 -right-2 w-6 h-6 border-r-2 border-b-2 border-primary"/>
             </div>
           </div>
 
-          {/* Tape pieces on corners */}
-          <div className="absolute -top-1 -left-1 w-8 h-6 bg-yellow-100/60 transform -rotate-45 opacity-70"
-               style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.1)' }}/>
-          <div className="absolute -top-1 -right-1 w-8 h-6 bg-yellow-100/60 transform rotate-45 opacity-70"
-               style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.1)' }}/>
-        </div>
-        ))}
-      </div>
-      {/* Rustic Paper Invitation */}
-      <div
-        className="relative z-10 max-w-2xl w-full"
-        data-testid="invitation-paper"
-      >
-        {/* Paper with rustic texture */}
-        <div 
-          className="relative bg-gradient-to-br from-amber-50 via-orange-50 to-amber-50 p-8 md:p-12 shadow-2xl"
-          style={{
-            backgroundImage: `
-              linear-gradient(90deg, rgba(139,115,85,0.03) 1px, transparent 1px),
-              linear-gradient(rgba(139,115,85,0.03) 1px, transparent 1px),
-              radial-gradient(circle at 20% 30%, rgba(160,82,45,0.05) 0%, transparent 50%),
-              radial-gradient(circle at 80% 70%, rgba(139,115,85,0.05) 0%, transparent 50%)
-            `,
-            backgroundSize: '30px 30px, 30px 30px, 200px 200px, 200px 200px',
-            border: '3px solid #333333',
-            boxShadow: `
-              0 20px 60px rgba(51,51,51,0.4),
-              inset 0 0 60px rgba(255,248,220,0.5),
-              0 0 0 1px rgba(51,51,51,0.2)
-            `
-          }}
-        >
-          {/* Decorative corner elements */}
-          <div className="absolute top-4 left-4 w-12 h-12 border-l-2 border-t-2 border-primary opacity-40"/>
-          <div className="absolute top-4 right-4 w-12 h-12 border-r-2 border-t-2 border-primary opacity-40"/>
-          <div className="absolute bottom-4 left-4 w-12 h-12 border-l-2 border-b-2 border-primary opacity-40"/>
-          <div className="absolute bottom-4 right-4 w-12 h-12 border-r-2 border-b-2 border-primary opacity-40"/>
+          {/* Right side - Invitation text */}
+          <div className="relative p-8 md:p-12 flex flex-col justify-center bg-white/50">
+            {/* Top decorative element */}
+            <motion.div 
+              className="mb-8"
+              initial={animationsEnabled ? { opacity: 0, y: -20 } : { opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={animationsEnabled ? { duration: 0.8, delay: 1 } : { duration: 0 }}
+            >
+              <h2 
+                className="text-3xl md:text-4xl font-script italic text-primary mb-2"
+                style={{ fontFamily: 'Boska, serif' }}
+                data-testid="text-we-are-getting-married"
+              >
+                We are getting married!
+              </h2>
+              <div className="h-0.5 w-24 bg-primary/40 mt-2"/>
+            </motion.div>
 
-          {/* Rustic leaf decoration */}
-          <div className="absolute -top-6 left-1/2 transform -translate-x-1/2">
-            <svg width="60" height="40" viewBox="0 0 60 40">
-              <path d="M30,5 Q20,10 15,20 Q20,15 30,15 Q40,15 45,20 Q40,10 30,5 Z" 
-                    fill="#8B7355" opacity="0.6"/>
-              <path d="M30,15 L30,35" stroke="#5D4E37" strokeWidth="2" opacity="0.5"/>
-            </svg>
-          </div>
+            {/* Main invitation text */}
+            <motion.div
+              className="space-y-6"
+              initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
+              animate={{ opacity: 1 }}
+              transition={animationsEnabled ? { duration: 0.8, delay: 1.3 } : { duration: 0 }}
+            >
+              <p 
+                className="text-lg md:text-xl text-foreground font-medium leading-relaxed"
+                style={{ fontFamily: 'Georgia, serif' }}
+                data-testid="text-join-us"
+              >
+                JOIN US AS WE CELEBRATE THE BEGINNING OF FOREVER
+              </p>
 
-          {/* Content */}
-          <div className="text-center relative z-10">
-            {/* Ornamental divider top */}
-            <div className="flex items-center justify-center mb-6">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"/>
-              <svg className="w-6 h-6 mx-3 text-primary" viewBox="0 0 24 24">
+              <div className="text-base md:text-lg text-foreground/80 space-y-3">
+                <p data-testid="text-ceremony-detail">
+                  WE CAN'T WAIT TO SAY "I DO" SURROUNDED BY THE PEOPLE WE LOVE MOST—YOU!
+                </p>
+                <p className="font-semibold text-foreground" data-testid="text-wedding-date">
+                  NOVEMBER 08, 2025
+                </p>
+                <p data-testid="text-wedding-venue">
+                  BALI, INDONESIA
+                </p>
+              </div>
+
+              <p 
+                className="text-sm md:text-base text-foreground/70 italic mt-6"
+                data-testid="text-rsvp-instruction"
+              >
+                RSVP DETAILS WILL FOLLOW
+              </p>
+            </motion.div>
+
+            {/* RSVP Button */}
+            <motion.div
+              className="mt-8"
+              initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={animationsEnabled ? { duration: 0.8, delay: 1.6 } : { duration: 0 }}
+            >
+              <button
+                onClick={scrollToRSVP}
+                className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 hover:shadow-lg hover:scale-105"
+                data-testid="button-rsvp-invite"
+              >
+                RSVP NOW
+              </button>
+            </motion.div>
+
+            {/* Bottom decorative elements */}
+            <div className="mt-8 flex items-center justify-start opacity-40">
+              <div className="h-px w-12 bg-primary"/>
+              <svg className="w-4 h-4 mx-2 text-primary" viewBox="0 0 24 24">
                 <path fill="currentColor" d="M12,2L13.09,8.26L22,9L13.09,9.74L12,16L10.91,9.74L2,9L10.91,8.26L12,2Z"/>
               </svg>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary"/>
+              <div className="h-px w-12 bg-primary"/>
             </div>
-
-            <h2 
-              className="text-4xl md:text-5xl font-script italic text-primary mb-6"
-              style={{ fontFamily: 'Boska, serif' }}
-            >
-              You're Invited
-            </h2>
-
-            <p 
-              className="text-lg md:text-xl text-foreground/90 leading-relaxed mb-6 italic"
-              style={{ fontFamily: 'Georgia, serif' }}
-            >
-              Come witness the moment we tie the knot and start our greatest adventure together
-            </p>
-
-            <div
-              className="text-base md:text-lg text-foreground/80"
-            >
-              <p className="mb-2">with love, laughter,</p>
-              <p>and a lifetime of memories</p>
-            </div>
-
-            {/* Ornamental divider bottom */}
-            <div className="flex items-center justify-center mt-6">
-              <div className="h-px w-16 bg-gradient-to-r from-transparent to-primary"/>
-              <div className="h-px w-16 bg-gradient-to-l from-transparent to-primary"/>
-            </div>
-          </div>
-
-          {/* Paper aging effect */}
-          <div className="absolute inset-0 pointer-events-none opacity-10">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-amber-900 to-transparent"/>
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-amber-900 to-transparent"/>
           </div>
         </div>
 
-        {/* Wax seal effect */}
-        <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-          <div className="relative">
-            <svg width="60" height="60" viewBox="0 0 60 60">
-              <circle cx="30" cy="30" r="28" fill="black" opacity="0.9"/>
-              <circle cx="30" cy="30" r="24" fill="black"/>
-            </svg>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <img src={MONOGRAM_removebg_preview} alt="I&R" className="h-16 w-16 object-contain" />
-            </div>
-            {/* Wax drips */}
-            <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-4 h-3 bg-gradient-to-b from-white to-transparent rounded-b-full opacity-70"/>
-          </div>
-        </div>
-      </div>
-      {/* Floating rustic elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute text-primary"
+        {/* Paper texture overlay */}
+        <div className="absolute inset-0 pointer-events-none opacity-5">
+          <div 
             style={{
-              left: `${20 + i * 15}%`,
-              top: `${10 + i * 20}%`
+              backgroundImage: `
+                linear-gradient(90deg, rgba(139,115,85,0.1) 1px, transparent 1px),
+                linear-gradient(rgba(139,115,85,0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '20px 20px'
             }}
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 10, -10, 0],
-              opacity: [0.2, 0.4, 0.2]
-            }}
-            transition={{
-              duration: 4 + i,
-              repeat: Infinity,
-              delay: i * 0.5
-            }}
-          >
-            <svg className="w-8 h-8" viewBox="0 0 24 24">
-              <path fill="currentColor" d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
-            </svg>
-          </motion.div>
-        ))}
-      </div>
+            className="w-full h-full"
+          />
+        </div>
+      </motion.div>
     </div>
   );
 };

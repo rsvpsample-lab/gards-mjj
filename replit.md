@@ -206,3 +206,11 @@ Successfully migrated from Lovable to Replit environment:
   - Removed ImageLoop slideshow component from the website:
     - Deleted ImageLoop component from Index.tsx
     - Removed "Our Moments" navigation link from Navigation component
+  - Redesigned RusticInvitationReveal component to match reference design:
+    - Two-column layout with prenup photo on left, invitation text on right
+    - Decorative framed photo using prenup1_1762420085164.jpg
+    - "We are getting married!" heading
+    - "JOIN US AS WE CELEBRATE THE BEGINNING OF FOREVER" message
+    - Wedding details: November 08, 2025, Bali, Indonesia
+    - RSVP button that scrolls to RSVP section
+    - Clean, elegant design with decorative elements
