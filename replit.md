@@ -190,3 +190,11 @@ Successfully migrated from Lovable to Replit environment:
   - Updated SEO meta tags in index.html with new couple names and wedding date
   - Updated footer with new couple names and reception venue
   - All changes verified and tested successfully
+  - Replaced all wedding images with new photos:
+    - Hero section background (hero-section_1762419093424.jpg)
+    - Ceremony venue image (ceremony_1762419093420.jpg)
+    - Reception venue image (reception_1762419093432.jpg)
+    - Cover images between sections (cover1, cover2, cover3)
+    - Complete slideshow with 11 prenup photos (prenup1-7, 9-12)
+    - Added BPI payment QR code to gifts section (gift_1762419093423.png)
+  - All image updates verified and tested successfully with hot module reload
