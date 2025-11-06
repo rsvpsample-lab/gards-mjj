@@ -19,12 +19,12 @@ const Footer = () => {
         >
           {/* Couple Names */}
           <div className="mb-4">
-            <h2 className="text-3xl sm:text-4xl mb-3 text-foreground" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
+            <h2 className="text-3xl sm:text-4xl mb-3 text-[hsl(var(--gold))]" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
               Gards
               <span className="text-primary mx-3">&</span>
               Mj
             </h2>
-            <p className="text-foreground/80 text-base">Villa Ibarra, Tagaytay</p>
+            <p className="text-[hsl(var(--gold))] text-base">Villa Ibarra, Tagaytay</p>
           </div>
 
           {/* Heart Divider */}
