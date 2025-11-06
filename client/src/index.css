@@ -82,10 +82,10 @@
     --gradient-bokeh: radial-gradient(ellipse at center, hsl(0, 0%, 20%) 0%, transparent 60%);
 
     /* Dusty Rose Shadows */
-    --shadow-elegant: 0 20px 50px -10px rgba(216, 181, 181, 0.5);
-    --shadow-soft: 0 10px 30px -5px rgba(216, 181, 181, 0.4);
-    --shadow-warm: 0 15px 40px -8px rgba(216, 181, 181, 0.45);
-    --shadow-glow: 0 0 30px rgba(216, 181, 181, 0.6);
+    --shadow-elegant: 0 20px 50px -10px rgba(216, 181, 181, 0.4);
+    --shadow-soft: 0 10px 30px -5px rgba(216, 181, 181, 0.3);
+    --shadow-warm: 0 15px 40px -8px rgba(216, 181, 181, 0.35);
+    --shadow-glow: 0 0 30px rgba(216, 181, 181, 0.5);
 
     /* Elegant Typography Scale */
     --font-display: 'Boska', 'Cormorant Garamond', serif; /* Headers - Boska 700 */
