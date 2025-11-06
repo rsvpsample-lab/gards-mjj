@@ -27,7 +27,6 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"/>
       </div>
-
       {/* Main invitation card */}
       <motion.div
         className="relative z-10 max-w-5xl w-full bg-gradient-to-br from-amber-50/90 via-white to-amber-50/90 rounded-3xl shadow-2xl overflow-hidden border-4 border-primary/20"
@@ -169,7 +168,6 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
           />
         </div>
       </motion.div>
-
       {/* Polaroid Photos - Forever, Soulmates, Beloved - Outside the card */}
       <motion.div
         className="relative z-10 flex flex-wrap items-center justify-center gap-6 max-w-4xl"
@@ -210,7 +208,7 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
               {/* Caption */}
               <div className="mt-3 text-center">
                 <p 
-                  className="text-gray-600 italic text-sm"
+                  className="italic text-sm text-[#d1a73d]"
                   style={{ fontFamily: 'Georgia, serif' }}
                 >
                   {polaroid.alt}
