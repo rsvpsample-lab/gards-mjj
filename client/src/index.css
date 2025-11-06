@@ -6,66 +6,71 @@
 
 @layer base {
   :root {
-    /* 70-20-10 Color Rule: Elegant White & Gray Theme */
+    /* Wedding Color Scheme: Gold, Burgundy & Dusty Rose */
     
     /* 70% PRIMARY - Pure White Background */
     --background: 0 0% 100%; /* Pure white background */
-    --foreground: 0 0% 20%; /* #333333 dark gray text */
+    --foreground: 0 0% 20%; /* Dark gray text */
 
     /* Card Colors - Primary Palette */
     --card: 0 0% 98%; /* Very light gray cards */
-    --card-foreground: 0 0% 20%; /* #333333 text on cards */
+    --card-foreground: 350 100% 25%; /* Burgundy text on cards */
 
     /* Popover Colors - Primary Palette */
     --popover: 0 0% 100%; /* White popover */
-    --popover-foreground: 0 0% 20%; /* #333333 text */
+    --popover-foreground: 350 100% 25%; /* Burgundy text */
 
-    /* Brand Color */
-    --brand: 0 0% 20%; /* #333333 - Main brand color */
+    /* Brand Color - Burgundy */
+    --brand: 350 100% 25%; /* #800020 Burgundy - Main brand color */
+    --burgundy: 350 100% 25%; /* Burgundy for headers */
     
-    /* 20% SECONDARY - Dark Gray (Supporting) */
-    --primary: 0 0% 20%; /* #333333 primary */
-    --primary-foreground: 0 0% 100%; /* White text on dark gray */
+    /* 20% SECONDARY - Burgundy (Supporting) */
+    --primary: 350 100% 25%; /* Burgundy primary */
+    --primary-foreground: 0 0% 100%; /* White text on burgundy */
 
     /* Secondary Colors - Supporting Palette */
-    --secondary: 0 0% 30%; /* Lighter gray secondary */
-    --secondary-foreground: 0 0% 100%; /* White text on gray */
+    --secondary: 350 80% 35%; /* Lighter burgundy secondary */
+    --secondary-foreground: 0 0% 100%; /* White text on burgundy */
 
     /* Muted Colors - Supporting Palette */
     --muted: 0 0% 95%; /* Light gray muted */
     --muted-foreground: 0 0% 40%; /* Medium gray text */
 
-    /* 10% ACCENT - Dark Gray Accent (Standout Elements & CTAs) */
-    --accent: 0 0% 20%; /* #333333 accent */
-    --accent-foreground: 0 0% 100%; /* White text */
+    /* 10% ACCENT - Gold Accent (Standout Elements & Icons) */
+    --accent: 43 62% 53%; /* Gold accent */
+    --accent-foreground: 0 0% 20%; /* Dark text on gold */
 
-    /* Gray/Special Accent - for CTAs and highlights */
-    --gold: 0 0% 20%; /* #333333 for buttons */
-    --gold-foreground: 0 0% 100%; /* White text on dark gray */
+    /* Gold - for icons and highlights */
+    --gold: 43 62% 53%; /* #D4AF37 Gold for icons */
+    --gold-foreground: 0 0% 20%; /* Dark text on gold */
     
-    /* Bright Gray - for emphasis */
-    --gold-bright: 0 0% 25%; /* Slightly lighter gray */
+    /* Bright Gold - for emphasis */
+    --gold-bright: 43 70% 60%; /* Brighter gold */
 
-    /* Natural Earth Palette - Soft accents */
-    --rose-gold: 0 0% 90%; /* Soft light gray */
-    --rose-gold-dark: 0 0% 80%; /* Darker light gray */
-    --amber-glow: 0 0% 75%; /* Medium light gray */
+    /* Dusty Rose - for shadows and subtle accents */
+    --dusty-rose: 0 34% 82%; /* #D8B5B5 Dusty rose */
+    --dusty-rose-dark: 0 34% 70%; /* Darker dusty rose */
+    
+    /* Natural Earth Palette - keeping for compatibility */
+    --rose-gold: 0 34% 82%; /* Dusty rose */
+    --rose-gold-dark: 0 34% 70%; /* Darker dusty rose */
+    --amber-glow: 43 62% 53%; /* Gold */
     --warm-light: 0 0% 85%; /* Warm light gray */
 
     /* Natural Accents Palette - Organic colors */
     --city-blue: 0 0% 70%; /* Gray accent */
     --city-cyan: 0 0% 65%; /* Gray accent */
-    --city-amber: 0 0% 60%; /* Gray accent */
+    --city-amber: 43 62% 53%; /* Gold */
     --city-purple: 0 0% 50%; /* Medium gray */
 
     /* Destructive */
     --destructive: 0 65% 50%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders & Inputs */
-    --border: 0 0% 90%; /* Light gray border */
+    /* Borders & Inputs - No borders, use shadows */
+    --border: 0 0% 100%; /* Transparent border */
     --input: 0 0% 98%; /* Very light gray input */
-    --ring: 0 0% 20%; /* #333333 accent ring */
+    --ring: 43 62% 53%; /* Gold accent ring */
 
     /* Border Radius */
     --radius: 0.75rem;
@@ -76,11 +81,11 @@
     --gradient-night: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(0, 0%, 98%) 100%);
     --gradient-bokeh: radial-gradient(ellipse at center, hsl(0, 0%, 20%) 0%, transparent 60%);
 
-    /* Elegant Gray Shadows */
-    --shadow-elegant: 0 20px 50px -10px rgba(51, 51, 51, 0.15);
-    --shadow-soft: 0 10px 30px -5px rgba(51, 51, 51, 0.1);
-    --shadow-warm: 0 15px 40px -8px rgba(51, 51, 51, 0.12);
-    --shadow-glow: 0 0 30px rgba(51, 51, 51, 0.2);
+    /* Dusty Rose Shadows */
+    --shadow-elegant: 0 20px 50px -10px rgba(216, 181, 181, 0.5);
+    --shadow-soft: 0 10px 30px -5px rgba(216, 181, 181, 0.4);
+    --shadow-warm: 0 15px 40px -8px rgba(216, 181, 181, 0.45);
+    --shadow-glow: 0 0 30px rgba(216, 181, 181, 0.6);
 
     /* Elegant Typography Scale */
     --font-display: 'Boska', 'Cormorant Garamond', serif; /* Headers - Boska 700 */
