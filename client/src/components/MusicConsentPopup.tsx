@@ -51,7 +51,7 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
               <div className="flex flex-col gap-3 pt-4">
                 <Button
                   onClick={() => handleConsent(true)}
-                  className="w-full bg-[#333333] hover:bg-[#222222] text-white font-medium py-6 px-6 rounded-lg transition-all duration-200"
+                  className="w-full bg-[#D4AF37] hover:bg-[#B8960F] text-white font-medium py-6 px-6 rounded-lg transition-all duration-200"
                   data-testid="button-allow-music"
                 >
                   <Volume2 className="h-5 w-5 mr-2" />
@@ -60,7 +60,7 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
                 <Button
                   onClick={() => handleConsent(false)}
                   variant="ghost"
-                  className="w-full text-[#666666] dark:text-[#aaaaaa] hover:text-[#333333] dark:hover:text-white hover:bg-[#f5f5f5] dark:hover:bg-[#2a2a2a] font-medium py-6 px-6 rounded-lg transition-all duration-200"
+                  className="w-full text-[#D4AF37] hover:text-[#B8960F] hover:bg-[#D4AF37]/10 font-medium py-6 px-6 rounded-lg transition-all duration-200"
                   data-testid="button-skip-music"
                 >
                   <VolumeX className="h-5 w-5 mr-2" />
