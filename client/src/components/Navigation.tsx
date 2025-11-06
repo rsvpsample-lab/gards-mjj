@@ -9,7 +9,6 @@ const Navigation = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   const navItems = [
-    { name: 'Our Moments', href: '#slideshow' },
     { name: 'Countdown', href: '#countdown' },
     { name: 'Our Commitment', href: '#story' },
     { name: 'Timeline', href: '#timeline' },

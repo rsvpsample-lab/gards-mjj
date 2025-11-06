@@ -14,7 +14,7 @@ const VenueSection = () => {
       name: 'CALERUEGA',
       address: 'Caleruega, Nasugbu, Batangas',
       image: ceremonyImage,
-      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Caleruega+Nasugbu+Batangas',
+      mapUrl: 'https://maps.app.goo.gl/ruE7cH3gRXfXUsMk9',
       mapEmbed: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Caleruega+Nasugbu+Batangas&zoom=15',
       description: 'Join us at the beautiful Caleruega for our wedding ceremony. This serene venue will witness our vows of eternal love as we begin our journey together.',
       details: 'The ceremony begins promptly at 3:00 PM. Please arrive early to be seated.',

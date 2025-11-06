@@ -202,3 +202,7 @@ Successfully migrated from Lovable to Replit environment:
     - Replaced all 11 prenup photos in ImageLoop slideshow component
     - Replaced all prenup photos in MemorableMomentsSection photo gallery (removed prenup8, now showing 11 photos)
     - Photos show beautiful moments from Fernwood gardens, red telephone booth, rain scenes, and formal attire shots
+  - Updated church Google Maps link to https://maps.app.goo.gl/ruE7cH3gRXfXUsMk9
+  - Removed ImageLoop slideshow component from the website:
+    - Deleted ImageLoop component from Index.tsx
+    - Removed "Our Moments" navigation link from Navigation component
