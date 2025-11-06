@@ -198,3 +198,7 @@ Successfully migrated from Lovable to Replit environment:
     - Complete slideshow with 11 prenup photos (prenup1-7, 9-12)
     - Added BPI payment QR code to gifts section (gift_1762419093423.png)
   - All image updates verified and tested successfully with hot module reload
+  - Updated prenup photos with new set (prenup1-7, 9-12 from timestamp 1762420085xxx):
+    - Replaced all 11 prenup photos in ImageLoop slideshow component
+    - Replaced all prenup photos in MemorableMomentsSection photo gallery (removed prenup8, now showing 11 photos)
+    - Photos show beautiful moments from Fernwood gardens, red telephone booth, rain scenes, and formal attire shots

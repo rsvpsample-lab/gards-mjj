@@ -4,18 +4,17 @@ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/compone
 import { X } from 'lucide-react';
 
 // Prenup photos
-import prenup1 from '@assets/prenup1_1762335182963.jpg';
-import prenup2 from '@assets/prenup2_1762335182963.jpg';
-import prenup3 from '@assets/prenup3_1762335182964.jpg';
-import prenup4 from '@assets/prenup4_1762335182964.jpg';
-import prenup5 from '@assets/prenup5_1762335182965.jpg';
-import prenup6 from '@assets/prenup6_1762335182965.jpg';
-import prenup7 from '@assets/prenup7_1762335182966.jpg';
-import prenup8 from '@assets/prenup8_1762335182966.jpg';
-import prenup9 from '@assets/prenup9_1762335182967.jpg';
-import prenup10 from '@assets/prenup10_1762335182968.jpg';
-import prenup11 from '@assets/prenup11_1762335182969.jpg';
-import prenup12 from '@assets/prenup12_1762335182970.jpg';
+import prenup1 from '@assets/prenup1_1762420085164.jpg';
+import prenup2 from '@assets/prenup2_1762420085165.jpg';
+import prenup3 from '@assets/prenup3_1762420085166.jpg';
+import prenup4 from '@assets/prenup4_1762420085166.jpg';
+import prenup5 from '@assets/prenup5_1762420085167.jpg';
+import prenup6 from '@assets/prenup6_1762420085168.jpg';
+import prenup7 from '@assets/prenup7_1762420085169.jpg';
+import prenup9 from '@assets/prenup9_1762420085169.jpg';
+import prenup10 from '@assets/prenup10_1762420085170.jpg';
+import prenup11 from '@assets/prenup11_1762420085170.jpg';
+import prenup12 from '@assets/prenup12_1762420085171.jpg';
 
 const MemorableMomentsSection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -28,7 +27,6 @@ const MemorableMomentsSection = () => {
     { src: prenup5, alt: "Prenup photo 5", height: "h-96" },
     { src: prenup6, alt: "Prenup photo 6", height: "h-72" },
     { src: prenup7, alt: "Prenup photo 7", height: "h-64" },
-    { src: prenup8, alt: "Prenup photo 8", height: "h-80" },
     { src: prenup9, alt: "Prenup photo 9", height: "h-72" },
     { src: prenup10, alt: "Prenup photo 10", height: "h-64" },
     { src: prenup11, alt: "Prenup photo 11", height: "h-96" },
