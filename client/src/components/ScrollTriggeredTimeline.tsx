@@ -42,7 +42,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ timelineEvent, i }) => {
             {/* Timeline dot */}
             <div className="absolute left-0 top-6 md:top-8 w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center z-10"
                 style={{
-                    background: 'hsl(var(--primary))',
+                    background: 'hsl(var(--gold))',
                     boxShadow: '0 0 0 4px rgba(212, 168, 83, 0.2)'
                 }}
             >
@@ -50,31 +50,32 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ timelineEvent, i }) => {
             </div>
 
             {/* Timeline line */}
-            <div className="absolute left-2.5 md:left-3 top-0 bottom-0 w-0.5 bg-primary/30"></div>
+            <div className="absolute left-2.5 md:left-3 top-0 bottom-0 w-0.5 bg-[hsl(var(--gold))]/30"></div>
             
             {/* Card */}
             <motion.div 
-                className="bg-card/40 backdrop-blur-sm border border-primary/20 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:border-primary/40"
+                className="bg-white border-0 rounded-xl overflow-hidden transition-all duration-300"
+                style={{ boxShadow: '0 10px 30px -5px rgba(216, 181, 181, 0.4)' }}
                 variants={cardVariants}
                 whileHover={{ y: -5 }}
             >
                 <div className="p-4 md:p-6">
                     <div className="flex items-start gap-3 md:gap-4">
                         <div className="flex-shrink-0">
-                            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-primary/20 border-2 border-primary" 
+                            <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center bg-[hsl(var(--gold))]/20 border-2 border-[hsl(var(--gold))]" 
                             >
-                                <IconComponent className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                                <IconComponent className="w-4 h-4 md:w-5 md:h-5 text-[hsl(var(--gold))]" />
                             </div>
                         </div>
                         
                         <div className="flex-1 min-w-0">
-                            <div className="text-xs md:text-sm font-bold text-primary mb-1">
+                            <div className="text-xs md:text-sm font-bold text-[hsl(var(--gold))] mb-1">
                                 {timelineEvent.time}
                             </div>
                             <h3 className="text-base md:text-lg font-serif font-semibold text-foreground mb-2">
                                 {timelineEvent.event}
                             </h3>
-                            <div className="w-10 h-0.5 bg-primary my-2 md:my-3"></div>
+                            <div className="w-10 h-0.5 bg-[hsl(var(--gold))] my-2 md:my-3"></div>
                             <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
                                 {getEventDescription(timelineEvent.event)}
                             </p>

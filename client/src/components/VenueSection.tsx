@@ -58,7 +58,8 @@ const VenueSection = () => {
         {venues.map((venue, index) => (
           <motion.div 
             key={index}
-            className="bg-card/30 border-0 rounded-3xl overflow-hidden shadow-elegant"
+            className="bg-white border-0 rounded-3xl overflow-hidden"
+            style={{ boxShadow: '0 20px 50px -10px rgba(216, 181, 181, 0.5)' }}
             initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={animationsEnabled ? { duration: 0.8, delay: 7.2 + (index * 0.3) } : { duration: 0 }}
@@ -130,8 +131,8 @@ const VenueSection = () => {
             {/* Footer */}
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 px-8 pb-8 pt-4 border-t border-primary/20 mx-8">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Clock className="w-5 h-5 text-primary" />
+                <div className="w-10 h-10 rounded-full bg-[hsl(var(--gold))]/20 flex items-center justify-center">
+                  <Clock className="w-5 h-5 text-[hsl(var(--gold))]" />
                 </div>
                 <div>
                   <p className="text-xs text-foreground/60 uppercase tracking-wide">Start Time</p>

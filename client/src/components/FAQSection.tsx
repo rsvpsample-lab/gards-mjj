@@ -65,7 +65,8 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              className="bg-card/30 border-0 rounded-xl shadow-soft overflow-hidden"
+              className="bg-white border-0 rounded-xl overflow-hidden"
+              style={{ boxShadow: '0 10px 30px -5px rgba(216, 181, 181, 0.4)' }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 12.1 + (index * 0.1) }}

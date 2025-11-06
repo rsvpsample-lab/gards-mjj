@@ -115,7 +115,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
           transition={{ delay: 0.2 }}
           className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-4"
         >
-          <Heart className="w-5 h-5 text-primary" />
+          <Heart className="w-5 h-5 text-[hsl(var(--gold))]" />
           <span className="text-foreground font-medium">
             Question {currentQuestion + 1} of {questions.length}
           </span>
@@ -146,7 +146,8 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
           animate={{ x: 0, opacity: 1 }}
           exit={animationsEnabled ? { x: -50, opacity: 0 } : { x: 0, opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="bg-white rounded-2xl shadow-2xl p-8 mb-6"
+          className="bg-white rounded-2xl p-8 mb-6"
+          style={{ boxShadow: '0 20px 50px -10px rgba(216, 181, 181, 0.5)' }}
           data-testid={`question-${currentQuestion}`}
         >
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
