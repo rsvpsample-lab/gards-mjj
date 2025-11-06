@@ -28,9 +28,9 @@ const HashtagGiftsSection = () => {
             />
           </div>
 
-          {/* Gift Guide Overlay Card - centered, half inside image, half outside */}
+          {/* Gift Guide Overlay Card - centered horizontally, 50% inside / 50% outside vertically */}
           <motion.div
-            className="relative md:absolute md:left-1/2 md:-translate-x-1/2 md:bottom-0 md:translate-y-1/2 mt-8 md:mt-0 mx-auto w-full max-w-lg px-4"
+            className="relative md:absolute md:left-1/2 md:-translate-x-1/2 md:bottom-0 md:translate-y-1/2 mt-8 md:mt-0 mx-auto w-full max-w-lg px-4 md:px-0"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}
