@@ -28,7 +28,7 @@ const EntourageSection = () => {
         >
           {/* Secondary Sponsors - 3 COLUMNS */}
           <div>
-            <h3 className="font-display italic text-lg text-[hsl(var(--burgundy))] mb-4" data-testid="heading-secondary-sponsors">Secondary Sponsors</h3>
+            <h3 className="font-display italic text-lg text-[hsl(var(--gold))] mb-4" data-testid="heading-secondary-sponsors">Secondary Sponsors</h3>
             <div className="grid grid-cols-3 gap-6">
               <div data-testid="section-candle">
                 <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">Candle</h4>
@@ -48,16 +48,23 @@ const EntourageSection = () => {
             </div>
           </div>
 
-          {/* Bridesmaid / Groomsmen - 2 COLUMNS */}
-          <div>
-            <h3 className="font-display italic text-lg text-[hsl(var(--burgundy))] mb-4" data-testid="heading-bridesmaid-groomsmen">Bridesmaid / Groomsmen</h3>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-1">
-              <p className="text-black font-normal text-xs">Gheremie Sombilla</p>
-              <p className="text-black font-normal text-xs">Beryl Verzosa</p>
-              <p className="text-black font-normal text-xs">Mark Joseph Bacay</p>
-              <p className="text-black font-normal text-xs">Jenny Vive Verzosa</p>
-              <p className="text-black font-normal text-xs">Jacob Angelo Torino</p>
-              <p className="text-black font-normal text-xs">Alexandra Mae Verzosa</p>
+          {/* Groomsmen and Bridesmaids - 2 COLUMNS */}
+          <div className="grid grid-cols-2 gap-x-8">
+            <div data-testid="section-groomsmen">
+              <h3 className="font-display italic text-lg text-[hsl(var(--gold))] mb-4">Groomsmen</h3>
+              <div className="space-y-1">
+                <p className="text-black font-normal text-xs">Gheremie Sombilla</p>
+                <p className="text-black font-normal text-xs">Mark Joseph Bacay</p>
+                <p className="text-black font-normal text-xs">Jacob Angelo Torino</p>
+              </div>
+            </div>
+            <div data-testid="section-bridesmaids">
+              <h3 className="font-display italic text-lg text-[hsl(var(--gold))] mb-4">Bridesmaids</h3>
+              <div className="space-y-1">
+                <p className="text-black font-normal text-xs">Beryl Verzosa</p>
+                <p className="text-black font-normal text-xs">Jenny Vive Verzosa</p>
+                <p className="text-black font-normal text-xs">Alexandra Mae Verzosa</p>
+              </div>
             </div>
           </div>
         </motion.div>

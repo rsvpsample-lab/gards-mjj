@@ -126,7 +126,7 @@ const MusicControl = ({ audioRef }: MusicControlProps) => {
           
           <motion.button
             onClick={toggleMusic}
-            className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 bg-[#d4af37] text-[#e6cac5]"
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]/50 text-[#e6cac5] bg-[#d1a73d]"
             style={{
               background: 'linear-gradient(135deg, rgba(23, 22, 16, 0.9) 0%, rgba(51, 51, 51, 0.8) 100%)',
               backdropFilter: 'blur(10px)',
