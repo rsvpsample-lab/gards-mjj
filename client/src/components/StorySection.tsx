@@ -6,8 +6,8 @@ import { useAnimationContext } from '@/contexts/AnimationContext';
 import { Sparkles, Compass } from 'lucide-react';
 
 // Import new images
-import promiseImage from '@assets/prenup7_1762335182966.jpg';
-import futureImage from '@assets/prenup8_1762335182966.jpg';
+import promiseImage from '@assets/prenup3_1762435311713.jpg';
+import futureImage from '@assets/prenup4_1762435311714.jpg';
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);

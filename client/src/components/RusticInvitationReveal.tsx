@@ -130,7 +130,7 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
 
             {/* RSVP Button */}
             <motion.div
-              className="mt-8"
+              className="mt-8 flex justify-center"
               initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
               animate={{ opacity: 1, y: 0 }}
               transition={animationsEnabled ? { duration: 0.8, delay: 1.6 } : { duration: 0 }}
