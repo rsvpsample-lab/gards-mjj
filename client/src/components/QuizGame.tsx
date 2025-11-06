@@ -147,7 +147,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
           exit={animationsEnabled ? { x: -50, opacity: 0 } : { x: 0, opacity: 1 }}
           transition={{ duration: 0.3 }}
           className="bg-white rounded-2xl p-8 mb-6"
-          style={{ boxShadow: '0 20px 50px -10px rgba(216, 181, 181, 0.5)' }}
+          style={{ boxShadow: '0 20px 50px -10px rgba(216, 181, 181, 0.8)' }}
           data-testid={`question-${currentQuestion}`}
         >
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-8 text-center">
