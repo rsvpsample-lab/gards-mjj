@@ -1,5 +1,8 @@
 import { motion } from 'framer-motion';
 import prenupPhoto from '@assets/prenup1_1762420085164.jpg';
+import groomPhoto from '@assets/prenup10_1762420085170.jpg';
+import couplePhoto from '@assets/prenup3_1762420085166.jpg';
+import bridePhoto from '@assets/prenup11_1762420085170.jpg';
 
 interface RusticInvitationRevealProps {
   animationsEnabled: boolean;
@@ -90,6 +93,55 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
               <div className="h-0.5 w-24 bg-primary/40 mt-2"/>
             </motion.div>
 
+            {/* Polaroid Photos - Groom, Couple, Bride */}
+            <motion.div
+              className="my-8 flex flex-wrap items-center justify-center gap-4"
+              initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={animationsEnabled ? { duration: 0.8, delay: 1.2 } : { duration: 0 }}
+            >
+              {[
+                { src: groomPhoto, alt: 'Groom', rotation: -3 },
+                { src: couplePhoto, alt: 'Couple', rotation: 1 },
+                { src: bridePhoto, alt: 'Bride', rotation: -2 }
+              ].map((polaroid, index) => (
+                <div
+                  key={index}
+                  className="relative group"
+                  style={{ transform: `rotate(${polaroid.rotation}deg)` }}
+                  data-testid={`mini-polaroid-${index}`}
+                >
+                  {/* Polaroid Frame */}
+                  <div 
+                    className="bg-white p-2 pb-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
+                    style={{
+                      boxShadow: '0 4px 15px rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.1)'
+                    }}
+                  >
+                    <div className="relative overflow-hidden bg-gray-100" style={{ width: '100px', height: '100px' }}>
+                      <img
+                        src={polaroid.src}
+                        alt={polaroid.alt}
+                        className="w-full h-full object-cover"
+                      />
+                      {/* Vintage photo effect */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-amber-100/20 via-transparent to-amber-900/10 pointer-events-none mix-blend-overlay"/>
+                    </div>
+
+                    {/* Caption */}
+                    <div className="mt-2 text-center">
+                      <p 
+                        className="text-gray-600 italic text-xs"
+                        style={{ fontFamily: 'Georgia, serif' }}
+                      >
+                        {polaroid.alt}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </motion.div>
+
             {/* Main invitation text */}
             <motion.div
               className="space-y-6"
@@ -110,10 +162,10 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
                   WE CAN'T WAIT TO SAY "I DO" SURROUNDED BY THE PEOPLE WE LOVE MOST—YOU!
                 </p>
                 <p className="font-semibold text-foreground" data-testid="text-wedding-date">
-                  NOVEMBER 08, 2025
+                  DECEMBER 02, 2025
                 </p>
                 <p data-testid="text-wedding-venue">
-                  BALI, INDONESIA
+                  CALERUEGA, NASUGBU, BATANGAS
                 </p>
               </div>
 

@@ -210,7 +210,8 @@ Successfully migrated from Lovable to Replit environment:
     - Two-column layout with prenup photo on left, invitation text on right
     - Decorative framed photo using prenup1_1762420085164.jpg
     - "We are getting married!" heading
+    - Added back groom, couple, bride mini polaroid photos after heading (prenup10, prenup3, prenup11)
     - "JOIN US AS WE CELEBRATE THE BEGINNING OF FOREVER" message
-    - Wedding details: November 08, 2025, Bali, Indonesia
+    - Wedding details: DECEMBER 02, 2025, CALERUEGA, NASUGBU, BATANGAS
     - RSVP button that scrolls to RSVP section
     - Clean, elegant design with decorative elements
