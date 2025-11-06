@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 
-import attireGuideImage from "@assets/Gemini_Generated_Image_b8wmd9b8wmd9b8wm (1)_1762421523418.png";
+import principalSponsorsImage from "@assets/principal_1762431959314.png";
+import guestsImage from "@assets/guests_1762431959312.png";
 
 const DressCodeSection = () => {
   return (
@@ -48,7 +49,7 @@ const DressCodeSection = () => {
                 </div>
               </motion.div>
               <motion.img 
-                src={attireGuideImage}
+                src={principalSponsorsImage}
                 alt="Formal attire guide for principal sponsors"
                 className="w-full max-w-4xl mx-auto object-contain rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
                 initial={{ opacity: 0, y: 20 }}
@@ -91,6 +92,15 @@ const DressCodeSection = () => {
                   </div>
                 </div>
               </motion.div>
+              <motion.img 
+                src={guestsImage}
+                alt="Semi-formal attire guide for guests"
+                className="w-full max-w-4xl mx-auto object-contain rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 9.1 }}
+                data-testid="img-attire-guide-guests"
+              />
               <div className="mt-6 grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
                 <p className="text-sm text-foreground/80 text-center font-semibold">
                   Gentlemen: Smart casual or business casual attire

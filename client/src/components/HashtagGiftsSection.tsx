@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import giftQRCode from '@assets/gift_1762419093423.png';
-import prenupPhoto from '@assets/3_1760525627712.jpg';
+import cover1Image from '@assets/cover1_1762419093421.jpg';
 
 const HashtagGiftsSection = () => {
   return (
@@ -12,18 +12,18 @@ const HashtagGiftsSection = () => {
       transition={{ duration: 1, delay: 0.3 }}
     >
       <div className="max-w-6xl mx-auto relative z-10">
-        {/* Image with Overlay Card Container */}
+        {/* Cover Image with Overlay Card Container */}
         <motion.div 
           className="relative mb-20"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
         >
-          {/* Prenup Photo */}
+          {/* Cover Image */}
           <div className="rounded-3xl overflow-hidden shadow-2xl">
             <img 
-              src={prenupPhoto}
-              alt="Prenup photo"
+              src={cover1Image}
+              alt="Wedding cover"
               className="w-full h-auto object-cover"
             />
           </div>
