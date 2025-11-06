@@ -59,11 +59,11 @@ const CountdownSection = () => {
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 0.3 } : { duration: 0 }}
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Heart className="w-8 h-8 text-primary fill-primary" />
-            <h2 className="text-5xl md:text-6xl font-display italic text-primary" data-testid="text-countdown-title">
+            <Heart className="w-8 h-8 text-[hsl(var(--gold))] fill-[hsl(var(--gold))]" />
+            <h2 className="text-5xl md:text-6xl font-display italic text-[hsl(var(--burgundy))]" data-testid="text-countdown-title">
               Counting Down
             </h2>
-            <Heart className="w-8 h-8 text-primary fill-primary" />
+            <Heart className="w-8 h-8 text-[hsl(var(--gold))] fill-[hsl(var(--gold))]" />
           </div>
           <p className="text-xl md:text-2xl text-foreground/80 font-light">
             Until we say "I Do"
@@ -72,15 +72,15 @@ const CountdownSection = () => {
 
         {/* Date Display */}
         <motion.div
-          className="mb-12 flex items-center justify-center gap-4 bg-white/50 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 max-w-md mx-auto shadow-lg"
+          className="mb-12 flex items-center justify-center gap-4 bg-white/50 backdrop-blur-sm border-0 rounded-2xl p-6 max-w-md mx-auto shadow-soft"
           initial={animationsEnabled ? { opacity: 0, scale: 0.9 } : { opacity: 1, scale: 1 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={animationsEnabled ? { duration: 0.6, delay: 0.5 } : { duration: 0 }}
         >
-          <Calendar className="w-6 h-6 text-primary" />
+          <Calendar className="w-6 h-6 text-[hsl(var(--gold))]" />
           <div>
             <p className="text-sm text-foreground/60 uppercase tracking-wider">Wedding Day</p>
-            <p className="text-2xl font-display font-semibold text-primary">
+            <p className="text-2xl font-display font-semibold text-[hsl(var(--burgundy))]">
               December 02, 2025
             </p>
           </div>
@@ -101,7 +101,7 @@ const CountdownSection = () => {
           ].map((item, index) => (
             <motion.div
               key={item.label}
-              className="relative bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300"
+              className="relative bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-sm border-0 rounded-2xl p-6 shadow-soft hover:shadow-elegant transition-all duration-300"
               initial={animationsEnabled ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={animationsEnabled ? { 
@@ -114,14 +114,14 @@ const CountdownSection = () => {
             >
               {/* Icon */}
               <div className="flex justify-center mb-3">
-                <div className="bg-primary/10 p-2 rounded-full">
-                  <item.icon className="w-5 h-5 text-primary" />
+                <div className="bg-[hsl(var(--gold))]/20 p-2 rounded-full">
+                  <item.icon className="w-5 h-5 text-[hsl(var(--gold))]" />
                 </div>
               </div>
 
               {/* Value */}
               <motion.div 
-                className="text-5xl md:text-6xl font-display font-bold text-primary mb-2"
+                className="text-5xl md:text-6xl font-display font-bold text-[hsl(var(--burgundy))] mb-2"
                 key={item.value}
                 initial={animationsEnabled ? { opacity: 0.7, scale: 0.9 } : { opacity: 1, scale: 1 }}
                 animate={{ opacity: 1, scale: 1 }}
