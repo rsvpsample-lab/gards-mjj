@@ -22,7 +22,7 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
   };
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen py-16 px-4">
+    <div className="relative flex flex-col items-center justify-center min-h-screen py-16 px-4 space-y-12">
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent"/>
@@ -91,55 +91,6 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
                 We are getting married!
               </h2>
               <div className="h-0.5 w-24 bg-primary/40 mt-2"/>
-            </motion.div>
-
-            {/* Polaroid Photos - Groom, Couple, Bride */}
-            <motion.div
-              className="my-8 flex flex-wrap items-center justify-center gap-4"
-              initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={animationsEnabled ? { duration: 0.8, delay: 1.2 } : { duration: 0 }}
-            >
-              {[
-                { src: groomPhoto, alt: 'Groom', rotation: -3 },
-                { src: couplePhoto, alt: 'Couple', rotation: 1 },
-                { src: bridePhoto, alt: 'Bride', rotation: -2 }
-              ].map((polaroid, index) => (
-                <div
-                  key={index}
-                  className="relative group"
-                  style={{ transform: `rotate(${polaroid.rotation}deg)` }}
-                  data-testid={`mini-polaroid-${index}`}
-                >
-                  {/* Polaroid Frame */}
-                  <div 
-                    className="bg-white p-2 pb-6 shadow-lg transform hover:scale-105 transition-transform duration-300"
-                    style={{
-                      boxShadow: '0 4px 15px rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.1)'
-                    }}
-                  >
-                    <div className="relative overflow-hidden bg-gray-100" style={{ width: '100px', height: '100px' }}>
-                      <img
-                        src={polaroid.src}
-                        alt={polaroid.alt}
-                        className="w-full h-full object-cover"
-                      />
-                      {/* Vintage photo effect */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-amber-100/20 via-transparent to-amber-900/10 pointer-events-none mix-blend-overlay"/>
-                    </div>
-
-                    {/* Caption */}
-                    <div className="mt-2 text-center">
-                      <p 
-                        className="text-gray-600 italic text-xs"
-                        style={{ fontFamily: 'Georgia, serif' }}
-                      >
-                        {polaroid.alt}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
             </motion.div>
 
             {/* Main invitation text */}
@@ -217,6 +168,61 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
             className="w-full h-full"
           />
         </div>
+      </motion.div>
+
+      {/* Polaroid Photos - Groom, Couple, Bride - Outside the card */}
+      <motion.div
+        className="relative z-10 flex flex-wrap items-center justify-center gap-6 max-w-4xl"
+        initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={animationsEnabled ? { duration: 0.8, delay: 1.8 } : { duration: 0 }}
+      >
+        {[
+          { src: groomPhoto, alt: 'Groom', rotation: -5 },
+          { src: couplePhoto, alt: 'Couple', rotation: 2 },
+          { src: bridePhoto, alt: 'Bride', rotation: -3 }
+        ].map((polaroid, index) => (
+          <motion.div
+            key={index}
+            className="relative group"
+            style={{ transform: `rotate(${polaroid.rotation}deg)` }}
+            data-testid={`mini-polaroid-${index}`}
+            whileHover={{ scale: 1.05, rotate: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            {/* Polaroid Frame */}
+            <div 
+              className="bg-white p-3 pb-10 shadow-2xl"
+              style={{
+                boxShadow: '0 10px 30px rgba(0,0,0,0.3), 0 0 0 1px rgba(0,0,0,0.1)'
+              }}
+            >
+              <div className="relative overflow-hidden bg-gray-100" style={{ width: '140px', height: '140px' }}>
+                <img
+                  src={polaroid.src}
+                  alt={polaroid.alt}
+                  className="w-full h-full object-cover"
+                />
+                {/* Vintage photo effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-100/20 via-transparent to-amber-900/10 pointer-events-none mix-blend-overlay"/>
+              </div>
+
+              {/* Caption */}
+              <div className="mt-3 text-center">
+                <p 
+                  className="text-gray-600 italic text-sm"
+                  style={{ fontFamily: 'Georgia, serif' }}
+                >
+                  {polaroid.alt}
+                </p>
+              </div>
+            </div>
+
+            {/* Tape effect */}
+            <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-16 h-6 bg-yellow-100/70 opacity-80"
+                 style={{ boxShadow: 'inset 0 1px 2px rgba(0,0,0,0.1)' }}/>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );

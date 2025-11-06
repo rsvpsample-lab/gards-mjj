@@ -210,8 +210,16 @@ Successfully migrated from Lovable to Replit environment:
     - Two-column layout with prenup photo on left, invitation text on right
     - Decorative framed photo using prenup1_1762420085164.jpg
     - "We are getting married!" heading
-    - Added back groom, couple, bride mini polaroid photos after heading (prenup10, prenup3, prenup11)
+    - Moved groom, couple, bride polaroid photos OUTSIDE the invitation card container (prenup10, prenup3, prenup11)
+    - Polaroids now appear after the main invitation card with tape effects
     - "JOIN US AS WE CELEBRATE THE BEGINNING OF FOREVER" message
     - Wedding details: DECEMBER 02, 2025, CALERUEGA, NASUGBU, BATANGAS
     - RSVP button that scrolls to RSVP section
     - Clean, elegant design with decorative elements
+  - Redesigned CountdownSection with modern elegant design:
+    - Heart icons and "Counting Down" heading
+    - Wedding date display card with calendar icon
+    - Beautiful card-style countdown boxes with icons
+    - Hover effects and animations
+    - "Every second brings us closer to forever" message
+    - Decorative background circles

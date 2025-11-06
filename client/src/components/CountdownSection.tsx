@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
+import { Calendar, Clock, Heart } from 'lucide-react';
 
 const CountdownSection = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -37,54 +38,90 @@ const CountdownSection = () => {
   return (
     <motion.section 
       id="countdown" 
-      className="section-pastel-blue py-2 px-4"
+      className="section-pastel-blue py-20 px-4 relative overflow-hidden"
       initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
       animate={{ opacity: 1 }}
       transition={animationsEnabled ? { duration: 1, delay: 2.5 } : { duration: 0 }}
     >
-      <div className="max-w-4xl mx-auto text-center relative">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div className="absolute top-10 left-10 w-32 h-32 border-2 border-primary rounded-full"/>
+        <div className="absolute bottom-10 right-10 w-40 h-40 border-2 border-primary rounded-full"/>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-primary/30 rounded-full"/>
+      </div>
+
+      <div className="max-w-5xl mx-auto text-center relative z-10">
+        {/* Header */}
         <motion.div 
-          className="mb-12"
+          className="mb-16"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 0.3 } : { duration: 0 }}
         >
-          <p className="text-2xl font-display font-bold text-primary mb-4 tracking-wider">
-            December 02, 2025
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Heart className="w-8 h-8 text-primary fill-primary" />
+            <h2 className="text-5xl md:text-6xl font-display italic text-primary" data-testid="text-countdown-title">
+              Counting Down
+            </h2>
+            <Heart className="w-8 h-8 text-primary fill-primary" />
+          </div>
+          <p className="text-xl md:text-2xl text-foreground/80 font-light">
+            Until we say "I Do"
           </p>
-          <h2 className="text-4xl font-display text-foreground mb-2" data-testid="text-countdown-title">
-            Forever starts soon
-          </h2>
         </motion.div>
 
+        {/* Date Display */}
+        <motion.div
+          className="mb-12 flex items-center justify-center gap-4 bg-white/50 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 max-w-md mx-auto shadow-lg"
+          initial={animationsEnabled ? { opacity: 0, scale: 0.9 } : { opacity: 1, scale: 1 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={animationsEnabled ? { duration: 0.6, delay: 0.5 } : { duration: 0 }}
+        >
+          <Calendar className="w-6 h-6 text-primary" />
+          <div>
+            <p className="text-sm text-foreground/60 uppercase tracking-wider">Wedding Day</p>
+            <p className="text-2xl font-display font-semibold text-primary">
+              December 02, 2025
+            </p>
+          </div>
+        </motion.div>
 
-
+        {/* Countdown Timer */}
         <motion.div 
-          className="grid grid-cols-4 gap-4 md:gap-8 max-w-lg mx-auto"
+          className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto"
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 0.6 } : { duration: 0 }}
+          transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 0.7 } : { duration: 0 }}
         >
           {[
-            { label: 'Days', value: timeLeft.days },
-            { label: 'Hours', value: timeLeft.hours },
-            { label: 'Minutes', value: timeLeft.minutes },
-            { label: 'Seconds', value: timeLeft.seconds }
+            { label: 'Days', value: timeLeft.days, icon: Calendar },
+            { label: 'Hours', value: timeLeft.hours, icon: Clock },
+            { label: 'Minutes', value: timeLeft.minutes, icon: Clock },
+            { label: 'Seconds', value: timeLeft.seconds, icon: Clock }
           ].map((item, index) => (
             <motion.div
               key={item.label}
-              className="text-center"
+              className="relative bg-gradient-to-br from-white/80 to-white/60 backdrop-blur-sm border-2 border-primary/20 rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300"
               initial={animationsEnabled ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={animationsEnabled ? { 
                 duration: 0.6, 
                 ease: "easeOut", 
-                delay: 0.8 + (index * 0.1) 
+                delay: 0.9 + (index * 0.1) 
               } : { duration: 0 }}
+              whileHover={{ scale: 1.05, y: -5 }}
               data-testid={`countdown-${item.label.toLowerCase()}`}
             >
+              {/* Icon */}
+              <div className="flex justify-center mb-3">
+                <div className="bg-primary/10 p-2 rounded-full">
+                  <item.icon className="w-5 h-5 text-primary" />
+                </div>
+              </div>
+
+              {/* Value */}
               <motion.div 
-                className="text-3xl md:text-4xl font-display mb-1 text-primary"
+                className="text-5xl md:text-6xl font-display font-bold text-primary mb-2"
                 key={item.value}
                 initial={animationsEnabled ? { opacity: 0.7, scale: 0.9 } : { opacity: 1, scale: 1 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -92,13 +129,30 @@ const CountdownSection = () => {
               >
                 {item.value.toString().padStart(2, '0')}
               </motion.div>
-              <div className="text-xs font-body uppercase tracking-wider text-muted-foreground">
+
+              {/* Label */}
+              <div className="text-sm md:text-base font-body uppercase tracking-widest text-foreground/70 font-medium">
                 {item.label}
               </div>
+
+              {/* Decorative corner */}
+              <div className="absolute top-2 right-2 w-3 h-3 border-t-2 border-r-2 border-primary/30"/>
+              <div className="absolute bottom-2 left-2 w-3 h-3 border-b-2 border-l-2 border-primary/30"/>
             </motion.div>
           ))}
         </motion.div>
 
+        {/* Bottom message */}
+        <motion.div
+          className="mt-12"
+          initial={animationsEnabled ? { opacity: 0 } : { opacity: 1 }}
+          animate={{ opacity: 1 }}
+          transition={animationsEnabled ? { duration: 0.8, delay: 1.5 } : { duration: 0 }}
+        >
+          <p className="text-lg md:text-xl text-foreground/70 italic font-light">
+            Every second brings us closer to forever
+          </p>
+        </motion.div>
       </div>
     </motion.section>
   );
