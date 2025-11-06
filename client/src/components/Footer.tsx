@@ -44,7 +44,7 @@ const Footer = () => {
           {/* Closing */}
           <div className="mt-8">
             <p className="text-foreground/80 text-sm mb-2">With love and gratitude,</p>
-            <p className="text-foreground text-lg" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
+            <p className="text-[hsl(var(--gold))] text-lg" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
               Gards & Mj
             </p>
           </div>
