@@ -35,7 +35,7 @@ const HashtagGiftsSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            <div className="backdrop-blur-md bg-white/70 dark:bg-gray-900/70 rounded-3xl p-8 shadow-2xl border border-white/20">
+            <div className="backdrop-blur-md bg-white/80 dark:bg-gray-900/80 rounded-3xl p-8 shadow-2xl border border-white/30">
               <h2 
                 className="font-display italic text-center mb-5 text-5xl text-gray-800 dark:text-white"
                 data-testid="text-gifts-title"
@@ -60,23 +60,21 @@ const HashtagGiftsSection = () => {
               </div>
             </div>
           </motion.div>
+        </motion.div>
 
-          {/* QR Code - Centered on Image with Glass Effect */}
-          <motion.div
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
-          >
-            <div className="backdrop-blur-md bg-white/30 dark:bg-gray-900/30 rounded-2xl p-6 shadow-2xl border border-white/30">
-              <img 
-                src={giftQRCode} 
-                alt="InstaPay QR Code for monetary gifts" 
-                className="max-w-[200px] w-full h-auto rounded-lg"
-                data-testid="img-gift-qr-code"
-              />
-            </div>
-          </motion.div>
+        {/* QR Code Section Below */}
+        <motion.div
+          className="flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.9 }}
+        >
+          <img 
+            src={giftQRCode} 
+            alt="InstaPay QR Code for monetary gifts" 
+            className="max-w-xs w-full h-auto rounded-lg shadow-md"
+            data-testid="img-gift-qr-code"
+          />
         </motion.div>
       </div>
     </motion.section>
