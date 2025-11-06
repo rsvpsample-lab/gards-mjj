@@ -66,7 +66,7 @@ const FAQSection = () => {
             <motion.div
               key={index}
               className="bg-white border-0 rounded-xl overflow-hidden"
-              style={{ boxShadow: '0 10px 30px -5px rgba(216, 181, 181, 0.7)' }}
+              style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.5), 0 10px 20px -5px rgba(128, 0, 32, 0.4)' }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 12.1 + (index * 0.1) }}

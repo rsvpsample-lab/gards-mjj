@@ -55,7 +55,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ timelineEvent, i }) => {
             {/* Card */}
             <motion.div 
                 className="bg-white border-0 rounded-xl overflow-hidden transition-all duration-300"
-                style={{ boxShadow: '0 10px 30px -5px rgba(216, 181, 181, 0.7)' }}
+                style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.5), 0 10px 20px -5px rgba(128, 0, 32, 0.4)' }}
                 variants={cardVariants}
                 whileHover={{ y: -5 }}
             >

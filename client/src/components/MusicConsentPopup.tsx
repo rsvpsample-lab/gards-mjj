@@ -27,7 +27,6 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             className="bg-white rounded-2xl p-10 md:p-12 max-w-md w-full"
-            style={{ boxShadow: '0 25px 50px -12px rgba(128, 0, 32, 0.6), 0 10px 25px -5px rgba(128, 0, 32, 0.5)' }}
           >
             <div className="text-center space-y-8">
               <motion.div
