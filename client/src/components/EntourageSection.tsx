@@ -29,12 +29,12 @@ const EntourageSection = () => {
           {/* Parents Section - 2 COLUMNS always */}
           <div className="grid grid-cols-2 gap-8">
             <div data-testid="section-parents-groom">
-              <h3 className="font-display italic text-sm text-[hsl(var(--gold))] mb-2">Parents of the Groom</h3>
+              <h3 className="font-display italic text-sm text-[hsl(var(--gold))] mb-2">Parents of Forever</h3>
               <p className="text-black font-normal text-xs">Cynthia Arce</p>
               <p className="text-black font-normal text-xs">Rodolfo Domingo Jr.</p>
             </div>
             <div data-testid="section-parents-bride">
-              <h3 className="font-display italic text-sm text-[hsl(var(--gold))] mb-2">Parents of the Bride</h3>
+              <h3 className="font-display italic text-sm text-[hsl(var(--gold))] mb-2">Parents of Beloved</h3>
               <p className="text-black font-normal text-xs">Rosario Collado</p>
               <p className="text-black font-normal text-xs">Ruben Collado</p>
             </div>

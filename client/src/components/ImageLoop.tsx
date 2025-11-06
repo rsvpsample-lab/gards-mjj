@@ -38,7 +38,7 @@ const ImageLoop = () => {
             <div key={`set1-${index}`} className="image-loop-item">
               <img
                 src={image}
-                alt={`Wedding couple moment ${index + 1}`}
+                alt={`Wedding soulmates moment ${index + 1}`}
                 className="image-loop-img"
                 loading="lazy"
                 data-testid={`img-loop-${index + 1}`}
@@ -50,7 +50,7 @@ const ImageLoop = () => {
             <div key={`set2-${index}`} className="image-loop-item">
               <img
                 src={image}
-                alt={`Wedding couple moment ${index + 1} duplicate`}
+                alt={`Wedding soulmates moment ${index + 1} duplicate`}
                 className="image-loop-img"
                 loading="lazy"
                 data-testid={`img-loop-dup-${index + 1}`}

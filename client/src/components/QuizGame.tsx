@@ -28,7 +28,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
     {
       id: 1,
       question: "Who made the first move?",
-      options: ["The Bride", "The Groom", "It was mutual", "Still debating!"],
+      options: ["Beloved", "Forever", "It was mutual", "Still debating!"],
       correctAnswer: 0,
       correctReaction: "🎯 Spot on! That's exactly how it happened!",
       incorrectReaction: "😄 Nice try! But that's not quite how it went!"
@@ -36,7 +36,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
     {
       id: 2,
       question: "Who said 'I love you' first?",
-      options: ["The Bride", "The Groom", "It was mutual", "Still debating!"],
+      options: ["Beloved", "Forever", "It was mutual", "Still debating!"],
       correctAnswer: 1,
       correctReaction: "✨ Amazing! You know the story well!",
       incorrectReaction: "💫 Not quite, but good guess!"
@@ -44,7 +44,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
     {
       id: 3,
       question: "Who's more likely to remind the other to eat vegetables?",
-      options: ["The Bride", "The Groom", "Both equally", "Neither of them"],
+      options: ["Beloved", "Forever", "Both equally", "Neither of them"],
       correctAnswer: 0,
       correctReaction: "💕 Perfect! You're really paying attention!",
       incorrectReaction: "💭 Ooh, so close but not quite!"
@@ -52,7 +52,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
     {
       id: 4,
       question: "Who planned more of the wedding?",
-      options: ["The Bride", "The Groom", "The Bride & Groom", "The internet"],
+      options: ["Beloved", "Forever", "Beloved & Forever", "The internet"],
       correctAnswer: 2,
       correctReaction: "🌟 Excellent! You've got this down!",
       incorrectReaction: "🎪 Good thinking, but that's not it!"
@@ -60,7 +60,7 @@ const QuizGame = ({ onComplete, animationsEnabled }: QuizGameProps) => {
     {
       id: 5,
       question: "Who makes the tastier home-cooked dish?",
-      options: ["The Bride", "The Groom", "We survive on takeout", "Still figuring it out"],
+      options: ["Beloved", "Forever", "We survive on takeout", "Still figuring it out"],
       correctAnswer: 1,
       correctReaction: "🎉 Brilliant! You really know them!",
       incorrectReaction: "🎈 Almost there, but not quite!"

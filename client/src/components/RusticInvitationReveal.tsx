@@ -170,7 +170,7 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
         </div>
       </motion.div>
 
-      {/* Polaroid Photos - Groom, Couple, Bride - Outside the card */}
+      {/* Polaroid Photos - Forever, Soulmates, Beloved - Outside the card */}
       <motion.div
         className="relative z-10 flex flex-wrap items-center justify-center gap-6 max-w-4xl"
         initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
@@ -178,9 +178,9 @@ const RusticInvitationReveal = ({ animationsEnabled }: RusticInvitationRevealPro
         transition={animationsEnabled ? { duration: 0.8, delay: 1.8 } : { duration: 0 }}
       >
         {[
-          { src: groomPhoto, alt: 'Groom', rotation: -5 },
-          { src: couplePhoto, alt: 'Couple', rotation: 2 },
-          { src: bridePhoto, alt: 'Bride', rotation: -3 }
+          { src: groomPhoto, alt: 'Forever', rotation: -5 },
+          { src: couplePhoto, alt: 'Soulmates', rotation: 2 },
+          { src: bridePhoto, alt: 'Beloved', rotation: -3 }
         ].map((polaroid, index) => (
           <motion.div
             key={index}
