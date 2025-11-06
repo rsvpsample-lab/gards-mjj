@@ -20,7 +20,7 @@ const HoverCardContent = React.forwardRef<
       className
     )}
     style={{
-      boxShadow: '0 4px 6px -1px rgba(128, 0, 32, 0.15), 0 2px 4px -2px rgba(128, 0, 32, 0.1)',
+      boxShadow: '0 10px 15px -3px rgba(128, 0, 32, 0.3), 0 4px 6px -4px rgba(128, 0, 32, 0.2)',
       ...style
     }}
     {...props}

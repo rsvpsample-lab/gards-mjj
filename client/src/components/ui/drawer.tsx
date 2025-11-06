@@ -45,7 +45,7 @@ const DrawerContent = React.forwardRef<
         className
       )}
       style={{
-        boxShadow: '0 10px 15px -3px rgba(128, 0, 32, 0.2), 0 4px 6px -4px rgba(128, 0, 32, 0.1)',
+        boxShadow: '0 20px 25px -5px rgba(128, 0, 32, 0.4), 0 10px 10px -5px rgba(128, 0, 32, 0.3)',
         ...style
       }}
       {...props}
