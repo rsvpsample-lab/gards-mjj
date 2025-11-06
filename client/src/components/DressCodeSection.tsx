@@ -20,7 +20,7 @@ const DressCodeSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 7.8 }}
         >
-          <h2 className="font-display italic text-gold mb-8 text-[48px]" data-testid="text-dresscode-title">
+          <h2 className="font-display italic text-[hsl(var(--burgundy))] mb-8 text-[48px]" data-testid="text-dresscode-title">
             Attire Guide
           </h2>
         </motion.div>
@@ -32,7 +32,7 @@ const DressCodeSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 8.1 }}
         >
-          <div className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 relative">
+          <div className="bg-card/30 border-0 rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 relative">
             <div className="text-center">
               <motion.div
                 initial={{ scale: 0.95 }}
@@ -40,7 +40,7 @@ const DressCodeSection = () => {
                 transition={{ duration: 0.6, delay: 8.3 }}
               >
                 <div className="mb-6 relative">
-                  <h3 className="text-xl font-display font-medium text-foreground mb-4">
+                  <h3 className="text-xl font-display font-medium text-[hsl(var(--burgundy))] mb-4">
                     FORMAL ATTIRE
                   </h3>
                   <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
@@ -76,7 +76,7 @@ const DressCodeSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 8.7 }}
         >
-          <div className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 relative">
+          <div className="bg-card/30 border-0 rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 relative">
             <div className="text-center">
               <motion.div
                 initial={{ scale: 0.95 }}
@@ -84,7 +84,7 @@ const DressCodeSection = () => {
                 transition={{ duration: 0.6, delay: 8.9 }}
               >
                 <div className="mb-6 relative">
-                  <h3 className="text-xl font-display font-medium text-foreground mb-4">
+                  <h3 className="text-xl font-display font-medium text-[hsl(var(--burgundy))] mb-4">
                     SEMI-FORMAL ATTIRE
                   </h3>
                   <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
@@ -115,12 +115,12 @@ const DressCodeSection = () => {
 
         {/* Color Palette Recommendation */}
         <motion.div
-          className="bg-white/5 border border-primary/20 rounded-2xl p-8 max-w-5xl mx-auto mb-8"
+          className="bg-white/5 border-0 rounded-2xl p-8 max-w-5xl mx-auto mb-8 shadow-soft"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.0 }}
         >
-          <h3 className="text-2xl font-display text-foreground text-center mb-6">Color Palette Recommendation</h3>
+          <h3 className="text-2xl font-display text-[hsl(var(--burgundy))] text-center mb-6">Color Palette Recommendation</h3>
           <p className="text-sm text-foreground/70 text-center mb-8">
             We recommend these elegant tones to complement our wedding theme
           </p>
@@ -160,18 +160,18 @@ const DressCodeSection = () => {
 
         {/* Additional Guidelines */}
         <motion.div
-          className="bg-white/5 border border-primary/20 rounded-2xl p-8 max-w-5xl mx-auto"
+          className="bg-white/5 border-0 rounded-2xl p-8 max-w-5xl mx-auto shadow-soft"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.7 }}
         >
-          <h3 className="text-2xl font-display text-foreground text-center mb-8">Additional Guidelines</h3>
+          <h3 className="text-2xl font-display text-[hsl(var(--burgundy))] text-center mb-8">Additional Guidelines</h3>
           
           <div className="grid md:grid-cols-2 gap-6">
             {/* Gentlemen Details */}
             <div className="bg-card/20 rounded-xl p-6">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full bg-[hsl(var(--gold))] mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 className="text-base font-display font-semibold text-foreground mb-2">
                     Gentlemen: Suits and Ties or Long Sleeves with Closed Shoes
@@ -186,7 +186,7 @@ const DressCodeSection = () => {
             {/* Ladies Details */}
             <div className="bg-card/20 rounded-xl p-6">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full bg-[hsl(var(--gold))] mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 className="text-base font-display font-semibold text-foreground mb-2">
                     Ladies: Full Length Dress or Gown with Heels of Choice
@@ -201,7 +201,7 @@ const DressCodeSection = () => {
             {/* Colors to avoid */}
             <div className="bg-card/20 rounded-xl p-6">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full bg-[hsl(var(--gold))] mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 className="text-base font-display font-semibold text-foreground mb-2">
                     Colors to Avoid
@@ -216,7 +216,7 @@ const DressCodeSection = () => {
             {/* Respectful attire */}
             <div className="bg-card/20 rounded-xl p-6">
               <div className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 rounded-full bg-[hsl(var(--gold))] mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 className="text-base font-display font-semibold text-foreground mb-2">
                     Respectful attire

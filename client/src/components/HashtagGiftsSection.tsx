@@ -18,9 +18,9 @@ const HashtagGiftsSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
         >
-          <div className="bg-card/30 border border-border rounded-3xl p-12 shadow-soft hover-elegant transition-all duration-500">
+          <div className="bg-card/30 border-0 rounded-3xl p-12 shadow-elegant hover-elegant transition-all duration-500">
             <h2 
-              className="font-display italic text-center mb-8 text-5xl text-gold"
+              className="font-display italic text-center mb-8 text-5xl text-[hsl(var(--burgundy))]"
               data-testid="text-gifts-title"
             >
               Gift Guide
@@ -51,7 +51,7 @@ const HashtagGiftsSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-soft">
             <img 
               src={giftQRCode} 
               alt="InstaPay QR Code for monetary gifts" 

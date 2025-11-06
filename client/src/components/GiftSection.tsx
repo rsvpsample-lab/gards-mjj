@@ -23,7 +23,7 @@ const GiftSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.8 }}
         >
-          <h2 className="text-5xl font-display italic text-gold-bright mb-8" data-testid="text-gifts-title">
+          <h2 className="text-5xl font-display italic text-[hsl(var(--burgundy))] mb-8" data-testid="text-gifts-title">
             Wedding Gifts
           </h2>
         </motion.div>
@@ -35,10 +35,10 @@ const GiftSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 10.1 }}
         >
-          <div className="bg-card/30 border border-border rounded-xl p-12 shadow-soft hover-elegant">
+          <div className="bg-card/30 border-0 rounded-xl p-12 shadow-elegant hover-elegant">
             {/* Icon */}
-            <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-8">
-              <Heart className="w-10 h-10 text-primary" />
+            <div className="w-20 h-20 bg-[hsl(var(--gold))]/20 rounded-full flex items-center justify-center mx-auto mb-8">
+              <Heart className="w-10 h-10 text-[hsl(var(--gold))]" />
             </div>
 
             {/* Main Message */}
@@ -66,8 +66,8 @@ const GiftSection = () => {
         >
           {/* BPI Payment */}
           <div>
-            <div className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant">
-              <h3 className="text-lg font-display font-semibold text-gold-bright mb-4 text-center">BPI</h3>
+            <div className="bg-card/30 border-0 rounded-xl p-8 shadow-soft hover-elegant">
+              <h3 className="text-lg font-display font-semibold text-[hsl(var(--burgundy))] mb-4 text-center">BPI</h3>
               <div className="text-center mb-4">
                 <img 
                   src="https://res.cloudinary.com/diskgga1j/image/upload/v1762335288/giftSection_1762335182961_zygkaq.jpg"
@@ -83,8 +83,8 @@ const GiftSection = () => {
 
           {/* BDO Payment */}
           <div>
-            <div className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant">
-              <h3 className="text-lg font-display font-semibold text-gold-bright mb-4 text-center">BDO</h3>
+            <div className="bg-card/30 border-0 rounded-xl p-8 shadow-soft hover-elegant">
+              <h3 className="text-lg font-display font-semibold text-[hsl(var(--burgundy))] mb-4 text-center">BDO</h3>
               <div className="text-center mb-4">
                 <img 
                   src="https://res.cloudinary.com/diskgga1j/image/upload/v1762335288/giftSection2_1762335182962_ipvdj5.jpg"

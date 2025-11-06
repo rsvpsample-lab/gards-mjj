@@ -11,7 +11,7 @@ const EntourageSection = () => {
     >
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.h2 
-          className="text-4xl md:text-5xl font-display italic text-black mb-12 md:mb-16"
+          className="text-4xl md:text-5xl font-display italic text-[hsl(var(--burgundy))] mb-12 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 8.5 }}
@@ -29,12 +29,12 @@ const EntourageSection = () => {
           {/* Parents Section - 2 COLUMNS always */}
           <div className="grid grid-cols-2 gap-8">
             <div data-testid="section-parents-groom">
-              <h3 className="font-display italic text-sm text-black mb-2">Parents of the Groom</h3>
+              <h3 className="font-display italic text-sm text-[hsl(var(--gold))] mb-2">Parents of the Groom</h3>
               <p className="text-black font-normal text-xs">Cynthia Arce</p>
               <p className="text-black font-normal text-xs">Rodolfo Domingo Jr.</p>
             </div>
             <div data-testid="section-parents-bride">
-              <h3 className="font-display italic text-sm text-black mb-2">Parents of the Bride</h3>
+              <h3 className="font-display italic text-sm text-[hsl(var(--gold))] mb-2">Parents of the Bride</h3>
               <p className="text-black font-normal text-xs">Rosario Collado</p>
               <p className="text-black font-normal text-xs">Ruben Collado</p>
             </div>
@@ -42,7 +42,7 @@ const EntourageSection = () => {
 
           {/* Principal Sponsors - 2 COLUMNS always */}
           <div>
-            <h3 className="font-display italic text-lg text-black mb-4" data-testid="heading-principal-sponsors">Principal Sponsors</h3>
+            <h3 className="font-display italic text-lg text-[hsl(var(--burgundy))] mb-4" data-testid="heading-principal-sponsors">Principal Sponsors</h3>
             <div className="grid grid-cols-2 gap-x-8 gap-y-0.5">
               <p className="text-black font-normal text-xs">Hon. Walfredo "Arman" Dimaguila</p>
               <p className="text-black font-normal text-xs">Hon. Lourdes Dimaguila</p>
@@ -65,20 +65,20 @@ const EntourageSection = () => {
 
           {/* Secondary Sponsors - 3 COLUMNS always */}
           <div>
-            <h3 className="font-display italic text-lg text-black mb-4" data-testid="heading-secondary-sponsors">Secondary Sponsors</h3>
+            <h3 className="font-display italic text-lg text-[hsl(var(--burgundy))] mb-4" data-testid="heading-secondary-sponsors">Secondary Sponsors</h3>
             <div className="grid grid-cols-3 gap-6">
               <div data-testid="section-candle">
-                <h4 className="font-bold italic text-xs text-black mb-1">Candle</h4>
+                <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">Candle</h4>
                 <p className="text-black font-normal text-xs">Celine Kaye Potes</p>
                 <p className="text-black font-normal text-xs">John Paul Dominic Potes</p>
               </div>
               <div data-testid="section-veil">
-                <h4 className="font-bold italic text-xs text-black mb-1">Veil</h4>
+                <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">Veil</h4>
                 <p className="text-black font-normal text-xs">Melody Collado</p>
                 <p className="text-black font-normal text-xs">Robin Collado</p>
               </div>
               <div data-testid="section-cord">
-                <h4 className="font-bold italic text-xs text-black mb-1">Cord</h4>
+                <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">Cord</h4>
                 <p className="text-black font-normal text-xs">Maria Christina Visaya</p>
                 <p className="text-black font-normal text-xs">Christian Visaya</p>
               </div>

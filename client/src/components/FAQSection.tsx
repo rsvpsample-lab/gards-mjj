@@ -51,7 +51,7 @@ const FAQSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 11.8 }}
         >
-          <h2 className="text-5xl font-display italic text-primary mb-8" data-testid="text-faq-title">
+          <h2 className="text-5xl font-display italic text-[hsl(var(--burgundy))] mb-8" data-testid="text-faq-title">
             Frequently Asked Questions
           </h2>
           <p className="text-lg font-body text-foreground max-w-2xl mx-auto">
@@ -65,7 +65,7 @@ const FAQSection = () => {
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
-              className="bg-card/30 border border-border rounded-xl shadow-soft overflow-hidden"
+              className="bg-card/30 border-0 rounded-xl shadow-soft overflow-hidden"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 12.1 + (index * 0.1) }}
@@ -75,16 +75,16 @@ const FAQSection = () => {
                 className="w-full px-8 py-6 text-left flex items-center justify-between hover:bg-gold/5 transition-colors duration-300"
               >
                 <div className="flex items-center gap-3">
-                  <faq.icon className="w-5 h-5 text-primary flex-shrink-0" />
-                  <h3 className="text-lg font-display font-bold text-primary">
+                  <faq.icon className="w-5 h-5 text-[hsl(var(--gold))] flex-shrink-0" />
+                  <h3 className="text-lg font-display font-bold text-[hsl(var(--burgundy))]">
                     {faq.question}
                   </h3>
                 </div>
                 <div className="flex-shrink-0">
                   {openItems.includes(index) ? (
-                    <ChevronUp className="w-5 h-5 text-primary" />
+                    <ChevronUp className="w-5 h-5 text-[hsl(var(--gold))]" />
                   ) : (
-                    <ChevronDown className="w-5 h-5 text-primary" />
+                    <ChevronDown className="w-5 h-5 text-[hsl(var(--gold))]" />
                   )}
                 </div>
               </button>

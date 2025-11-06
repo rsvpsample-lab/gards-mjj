@@ -25,7 +25,7 @@ const RSVPSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 10.8 } : { duration: 0 }}
         >
-          <h2 className="text-5xl font-script italic font-black text-gold mb-8" data-testid="text-rsvp-title">
+          <h2 className="text-5xl font-script italic font-black text-[hsl(var(--burgundy))] mb-8" data-testid="text-rsvp-title">
             Please RSVP
           </h2>
         </motion.div>
@@ -37,13 +37,13 @@ const RSVPSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 11.1 } : { duration: 0 }}
         >
-          <div className="bg-card/30 border border-border rounded-xl p-12 shadow-soft hover-elegant">
+          <div className="bg-card/30 border-0 rounded-xl p-12 shadow-elegant hover-elegant">
             {/* RSVP Deadline */}
             <div className="text-center mb-8">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4">
-                <Calendar className="w-8 h-8 text-primary" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-[hsl(var(--gold))]/20 rounded-full mb-4">
+                <Calendar className="w-8 h-8 text-[hsl(var(--gold))]" />
               </div>
-              <h3 className="text-xl font-display font-semibold mb-2 text-foreground">RSVP Deadline</h3>
+              <h3 className="text-xl font-display font-semibold mb-2 text-[hsl(var(--burgundy))]">RSVP Deadline</h3>
               <p className="text-lg text-muted-foreground">November 20, 2025</p>
             </div>
 
@@ -79,9 +79,9 @@ const RSVPSection = () => {
 
             {/* Decorative Elements */}
             <div className="mt-8 flex justify-center items-center space-x-4">
-              <div className="w-12 h-px bg-primary/30"></div>
-              <div className={`w-3 h-3 bg-primary rounded-full ${animationsEnabled ? 'animate-float' : ''}`}></div>
-              <div className="w-12 h-px bg-primary/30"></div>
+              <div className="w-12 h-px bg-[hsl(var(--gold))]/30"></div>
+              <div className={`w-3 h-3 bg-[hsl(var(--gold))] rounded-full ${animationsEnabled ? 'animate-float' : ''}`}></div>
+              <div className="w-12 h-px bg-[hsl(var(--gold))]/30"></div>
             </div>
           </div>
         </motion.div>
