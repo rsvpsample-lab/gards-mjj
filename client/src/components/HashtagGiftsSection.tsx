@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Camera, Gift } from 'lucide-react';
+import giftQRCode from '@assets/gift_1762419093423.png';
 
 const HashtagGiftsSection = () => {
   return (
@@ -98,7 +99,7 @@ const HashtagGiftsSection = () => {
             transition={{ duration: 0.6, delay: 1.1 }}
           >
             <p 
-              className="text-lg text-foreground leading-relaxed"
+              className="text-lg text-foreground leading-relaxed mb-6"
               data-testid="text-gifts-message"
             >
               With all that we have, we've been truly blessed.
@@ -109,6 +110,20 @@ const HashtagGiftsSection = () => {
               <br />
               Monetary gift is one we suggest.
             </p>
+            
+            <motion.div
+              className="mt-8 flex justify-center"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 1.3 }}
+            >
+              <img 
+                src={giftQRCode} 
+                alt="BPI InstaPay QR Code for monetary gifts" 
+                className="max-w-xs w-full h-auto rounded-lg shadow-md"
+                data-testid="img-gift-qr-code"
+              />
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

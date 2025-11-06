@@ -3,7 +3,8 @@ import { MapPin, ExternalLink, Clock } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 
-import ceremonyImage from "@assets/ceremony and reception_1762335182957.jpg";
+import ceremonyImage from "@assets/ceremony_1762419093420.jpg";
+import receptionImage from "@assets/reception_1762419093432.jpg";
 
 const VenueSection = () => {
   const { animationsEnabled } = useAnimationContext();
@@ -23,7 +24,7 @@ const VenueSection = () => {
       title: 'Wedding Reception',
       name: 'VILLA IBARRA',
       address: 'Villa Ibarra, Tagaytay',
-      image: ceremonyImage,
+      image: receptionImage,
       mapUrl: 'https://www.google.com/maps/search/?api=1&query=Villa+Ibarra+Tagaytay',
       mapEmbed: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Villa+Ibarra+Tagaytay&zoom=15',
       description: 'Continue the celebration with us at Villa Ibarra in Tagaytay. This elegant venue will host our reception where we will celebrate with dinner, dancing, and joy.',

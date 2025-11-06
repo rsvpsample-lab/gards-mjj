@@ -1,10 +1,17 @@
 import { useAnimationContext } from '@/contexts/AnimationContext';
 
-// Image loop images - Nature wedding photos
-import imageLoop1 from '@assets/prenup1_1762335182963.jpg';
-import imageLoop2 from '@assets/prenup5_1762335182965.jpg';
-import imageLoop3 from '@assets/prenup9_1762335182967.jpg';
-import imageLoop4 from '@assets/prenup6_1762335182965.jpg';
+// Image loop images - Prenup photos
+import imageLoop1 from '@assets/prenup1_1762419093425.jpg';
+import imageLoop2 from '@assets/prenup2_1762419093425.jpg';
+import imageLoop3 from '@assets/prenup3_1762419093426.jpg';
+import imageLoop4 from '@assets/prenup4_1762419093426.jpg';
+import imageLoop5 from '@assets/prenup5_1762419093427.jpg';
+import imageLoop6 from '@assets/prenup6_1762419093427.jpg';
+import imageLoop7 from '@assets/prenup7_1762419093428.jpg';
+import imageLoop9 from '@assets/prenup9_1762419093429.jpg';
+import imageLoop10 from '@assets/prenup10_1762419093430.jpg';
+import imageLoop11 from '@assets/prenup11_1762419093430.jpg';
+import imageLoop12 from '@assets/prenup12_1762419093431.jpg';
 
 const ImageLoop = () => {
   const { animationsEnabled } = useAnimationContext();
@@ -13,10 +20,13 @@ const ImageLoop = () => {
     imageLoop2,
     imageLoop3,
     imageLoop4,
-    imageLoop1,
-    imageLoop2,
-    imageLoop3,
-    imageLoop4
+    imageLoop5,
+    imageLoop6,
+    imageLoop7,
+    imageLoop9,
+    imageLoop10,
+    imageLoop11,
+    imageLoop12
   ];
 
   return (
