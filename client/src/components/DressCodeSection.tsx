@@ -24,9 +24,9 @@ const DressCodeSection = () => {
           </h2>
         </motion.div>
 
-        {/* Combined Attire Guide Image */}
+        {/* Principal Sponsors - Formal Attire */}
         <motion.div 
-          className="mb-16"
+          className="mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 8.1 }}
@@ -43,18 +43,18 @@ const DressCodeSection = () => {
                     FORMAL ATTIRE
                   </h3>
                   <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
-                    <span className="text-sm font-normal text-foreground">For Gentlemen & Ladies</span>
+                    <span className="text-sm font-normal text-foreground">For Principal Sponsors</span>
                   </div>
                 </div>
               </motion.div>
               <motion.img 
                 src={attireGuideImage}
-                alt="Formal attire guide for gentlemen and ladies"
+                alt="Formal attire guide for principal sponsors"
                 className="w-full max-w-4xl mx-auto object-contain rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 8.5 }}
-                data-testid="img-attire-guide"
+                data-testid="img-attire-guide-formal"
               />
               <div className="mt-6 grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
                 <p className="text-sm text-foreground/80 text-center font-semibold">
@@ -62,6 +62,41 @@ const DressCodeSection = () => {
                 </p>
                 <p className="text-sm text-foreground/80 text-center font-semibold">
                   Ladies: Full Length Dress or Gown with Heels of Choice
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Guests - Semi-Formal Attire */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 8.7 }}
+        >
+          <div className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 relative">
+            <div className="text-center">
+              <motion.div
+                initial={{ scale: 0.95 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.6, delay: 8.9 }}
+              >
+                <div className="mb-6 relative">
+                  <h3 className="text-xl font-display font-medium text-foreground mb-4">
+                    SEMI-FORMAL ATTIRE
+                  </h3>
+                  <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
+                    <span className="text-sm font-normal text-foreground">For Guests</span>
+                  </div>
+                </div>
+              </motion.div>
+              <div className="mt-6 grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <p className="text-sm text-foreground/80 text-center font-semibold">
+                  Gentlemen: Smart casual or business casual attire
+                </p>
+                <p className="text-sm text-foreground/80 text-center font-semibold">
+                  Ladies: Cocktail dress or dressy separates
                 </p>
               </div>
             </div>
