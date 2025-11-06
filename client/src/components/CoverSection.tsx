@@ -58,7 +58,7 @@ const CoverSection = ({ imageUrl, alt, className = "" }: CoverSectionProps) => {
         ) : (
           <img
             src={imageUrl}
-            alt="Isabel & Rustin Wedding Cover Image 2"
+            alt={alt}
             style={{
               display: 'block',
               width: '100%',

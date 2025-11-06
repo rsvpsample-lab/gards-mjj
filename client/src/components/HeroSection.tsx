@@ -25,7 +25,7 @@ const HeroSection = () => {
             {animationsEnabled ? (
               <TypeAnimation
                 sequence={[
-                  'JHEI AFABLE\n&\nJOYCE ESTANQUE',
+                  'GARDS\n&\nMJ',
                   () => {
                     setShowElements(true);
                   }
@@ -48,11 +48,11 @@ const HeroSection = () => {
                 }}
                 className="typewriter-text"
               >
-                JHEI AFABLE
+                GARDS
                 <br />
                 &
                 <br />
-                JOYCE ESTANQUE
+                MJ
               </span>
             )}
           </h1>
@@ -63,12 +63,12 @@ const HeroSection = () => {
             <div className="space-y-3">
               <div className="text-center">
                 <p className="text-lg sm:text-xl text-white font-light tracking-wide font-times" data-testid="text-date">
-                  12.26.2025 | Friday
+                  12.02.2025 | Tuesday
                 </p>
               </div>
               <div className="text-center">
                 <p className="text-lg sm:text-xl text-white font-light tracking-wide font-times" data-testid="text-venue">
-                  SOIREE EVENTS PLACE
+                  CALERUEGA
                 </p>
               </div>
             </div>
