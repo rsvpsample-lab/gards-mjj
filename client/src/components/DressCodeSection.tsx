@@ -1,0 +1,190 @@
+import { motion } from 'framer-motion';
+
+import attireGuideImage from "@assets/attireguide (1)_1762337075374.png";
+
+const DressCodeSection = () => {
+  return (
+    <motion.section 
+      id="dresscode" 
+      className="section-pastel-blue py-12 px-4 relative overflow-hidden"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1, delay: 7.5 }}
+    >
+      <div className="max-w-5xl mx-auto relative z-10">
+        {/* Section Header */}
+        <motion.div 
+          className="text-center mb-16 relative"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 7.8 }}
+        >
+          <h2 className="font-display italic text-gold mb-8 text-[48px]" data-testid="text-dresscode-title">
+            Attire Guide
+          </h2>
+        </motion.div>
+
+        {/* Combined Attire Guide Image */}
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 8.1 }}
+        >
+          <div className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 relative">
+            <div className="text-center">
+              <motion.div
+                initial={{ scale: 0.95 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.6, delay: 8.3 }}
+              >
+                <div className="mb-6 relative">
+                  <h3 className="text-xl font-display font-medium text-foreground mb-4">
+                    FORMAL ATTIRE
+                  </h3>
+                  <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
+                    <span className="text-sm font-normal text-foreground">For Gentlemen & Ladies</span>
+                  </div>
+                </div>
+              </motion.div>
+              <motion.img 
+                src={attireGuideImage}
+                alt="Formal attire guide for gentlemen and ladies"
+                className="w-full max-w-4xl mx-auto object-contain rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 8.5 }}
+                data-testid="img-attire-guide"
+              />
+              <div className="mt-6 grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                <p className="text-sm text-foreground/80 text-center font-semibold">
+                  Gentlemen: Suits and Ties or Long Sleeves with Closed Shoes
+                </p>
+                <p className="text-sm text-foreground/80 text-center font-semibold">
+                  Ladies: Full Length Dress or Gown with Heels of Choice
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Color Palette Recommendation */}
+        <motion.div
+          className="bg-white/5 border border-primary/20 rounded-2xl p-8 max-w-5xl mx-auto mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 9.0 }}
+        >
+          <h3 className="text-2xl font-display text-foreground text-center mb-6">Color Palette Recommendation</h3>
+          <p className="text-sm text-foreground/70 text-center mb-8">
+            We recommend these elegant tones to complement our wedding theme
+          </p>
+          
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              { name: 'Brown', hex: '#B4947D' },
+              { name: 'Nude Pink', hex: '#E4C9B8' },
+              { name: 'Beige', hex: '#E0D2C7' },
+              { name: 'Pale Silver', hex: '#D2C3BE' },
+              { name: 'Light Grey', hex: '#BEBEBE' }
+            ].map((color, index) => (
+              <motion.div
+                key={color.name}
+                className="flex flex-col items-center gap-3"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 9.2 + (index * 0.1) }}
+                data-testid={`color-${color.name.toLowerCase().replace(' ', '-')}`}
+              >
+                <div 
+                  className="w-20 h-20 rounded-full shadow-lg border-4 border-white/20 hover:scale-110 transition-transform duration-300"
+                  style={{ backgroundColor: color.hex }}
+                  title={color.hex}
+                />
+                <div className="text-center">
+                  <p className="text-sm font-semibold text-foreground">{color.name}</p>
+                  <p className="text-xs text-foreground/60 font-mono">{color.hex}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Additional Guidelines */}
+        <motion.div
+          className="bg-white/5 border border-primary/20 rounded-2xl p-8 max-w-5xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 9.7 }}
+        >
+          <h3 className="text-2xl font-display text-foreground text-center mb-8">Additional Guidelines</h3>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {/* Gentlemen Details */}
+            <div className="bg-card/20 rounded-xl p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-base font-display font-semibold text-foreground mb-2">
+                    Gentlemen: Suits and Ties or Long Sleeves with Closed Shoes
+                  </h4>
+                  <p className="text-sm text-foreground/70">
+                    Please dress elegantly in formal attire with closed shoes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Ladies Details */}
+            <div className="bg-card/20 rounded-xl p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-base font-display font-semibold text-foreground mb-2">
+                    Ladies: Full Length Dress or Gown with Heels of Choice
+                  </h4>
+                  <p className="text-sm text-foreground/70">
+                    Please wear a full-length dress or gown with your choice of heels.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* No white colors */}
+            <div className="bg-card/20 rounded-xl p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-base font-display font-semibold text-foreground mb-2">
+                    No white colors
+                  </h4>
+                  <p className="text-sm text-foreground/70">
+                    Avoid wearing white, as this color is reserved for the bride.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Respectful attire */}
+            <div className="bg-card/20 rounded-xl p-6">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0"></div>
+                <div>
+                  <h4 className="text-base font-display font-semibold text-foreground mb-2">
+                    Respectful attire
+                  </h4>
+                  <p className="text-sm text-foreground/70">
+                    Kindly ensure your attire is respectful and appropriate for a religious ceremony.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+      </div>
+    </motion.section>
+  );
+};
+
+export default DressCodeSection;
