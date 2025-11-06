@@ -116,7 +116,7 @@ const DressCodeSection = () => {
         {/* Color Palette Recommendation */}
         <motion.div
           className="bg-white border-0 rounded-2xl p-8 max-w-5xl mx-auto mb-8"
-          style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.5), 0 10px 20px -5px rgba(128, 0, 32, 0.4)' }}
+          style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.35), 0 10px 20px -5px rgba(128, 0, 32, 0.25)' }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.0 }}
@@ -162,7 +162,7 @@ const DressCodeSection = () => {
         {/* Additional Guidelines */}
         <motion.div
           className="bg-white border-0 rounded-2xl p-8 max-w-5xl mx-auto"
-          style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.5), 0 10px 20px -5px rgba(128, 0, 32, 0.4)' }}
+          style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.35), 0 10px 20px -5px rgba(128, 0, 32, 0.25)' }}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.7 }}

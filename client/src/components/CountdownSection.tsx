@@ -73,7 +73,7 @@ const CountdownSection = () => {
         {/* Date Display */}
         <motion.div
           className="mb-12 flex items-center justify-center gap-4 bg-white border-0 rounded-2xl p-6 max-w-md mx-auto"
-          style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.5), 0 10px 20px -5px rgba(128, 0, 32, 0.4)' }}
+          style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.35), 0 10px 20px -5px rgba(128, 0, 32, 0.25)' }}
           initial={animationsEnabled ? { opacity: 0, scale: 0.9 } : { opacity: 1, scale: 1 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={animationsEnabled ? { duration: 0.6, delay: 0.5 } : { duration: 0 }}
@@ -103,7 +103,7 @@ const CountdownSection = () => {
             <motion.div
               key={item.label}
               className="relative bg-white border-0 rounded-2xl p-6 transition-all duration-300"
-              style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.5), 0 10px 20px -5px rgba(128, 0, 32, 0.4)' }}
+              style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.35), 0 10px 20px -5px rgba(128, 0, 32, 0.25)' }}
               initial={animationsEnabled ? { opacity: 0, scale: 0.8 } : { opacity: 1, scale: 1 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={animationsEnabled ? { 

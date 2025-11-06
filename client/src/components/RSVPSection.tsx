@@ -37,7 +37,7 @@ const RSVPSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 11.1 } : { duration: 0 }}
         >
-          <div className="bg-white border-0 rounded-xl p-12 hover-elegant" style={{ boxShadow: '0 25px 60px -15px rgba(128, 0, 32, 0.6), 0 15px 30px -10px rgba(128, 0, 32, 0.5)' }}>
+          <div className="bg-white border-0 rounded-xl p-12 hover-elegant" style={{ boxShadow: '0 25px 60px -15px rgba(128, 0, 32, 0.4), 0 15px 30px -10px rgba(128, 0, 32, 0.3)' }}>
             {/* RSVP Deadline */}
             <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-[hsl(var(--gold))]/20 rounded-full mb-4">

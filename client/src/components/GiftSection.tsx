@@ -35,7 +35,7 @@ const GiftSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 10.1 }}
         >
-          <div className="bg-white border-0 rounded-xl p-12 hover-elegant" style={{ boxShadow: '0 25px 60px -15px rgba(128, 0, 32, 0.6), 0 15px 30px -10px rgba(128, 0, 32, 0.5)' }}>
+          <div className="bg-white border-0 rounded-xl p-12 hover-elegant" style={{ boxShadow: '0 25px 60px -15px rgba(128, 0, 32, 0.4), 0 15px 30px -10px rgba(128, 0, 32, 0.3)' }}>
             {/* Icon */}
             <div className="w-20 h-20 bg-[hsl(var(--gold))]/20 rounded-full flex items-center justify-center mx-auto mb-8">
               <Heart className="w-10 h-10 text-[hsl(var(--gold))]" />
@@ -66,7 +66,7 @@ const GiftSection = () => {
         >
           {/* BPI Payment */}
           <div>
-            <div className="bg-white border-0 rounded-xl p-8 hover-elegant" style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.5), 0 10px 20px -5px rgba(128, 0, 32, 0.4)' }}>
+            <div className="bg-white border-0 rounded-xl p-8 hover-elegant" style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.35), 0 10px 20px -5px rgba(128, 0, 32, 0.25)' }}>
               <h3 className="text-lg font-display font-semibold text-[hsl(var(--burgundy))] mb-4 text-center">BPI</h3>
               <div className="text-center mb-4">
                 <img 
@@ -83,7 +83,7 @@ const GiftSection = () => {
 
           {/* BDO Payment */}
           <div>
-            <div className="bg-white border-0 rounded-xl p-8 hover-elegant" style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.5), 0 10px 20px -5px rgba(128, 0, 32, 0.4)' }}>
+            <div className="bg-white border-0 rounded-xl p-8 hover-elegant" style={{ boxShadow: '0 20px 40px -10px rgba(128, 0, 32, 0.35), 0 10px 20px -5px rgba(128, 0, 32, 0.25)' }}>
               <h3 className="text-lg font-display font-semibold text-[hsl(var(--burgundy))] mb-4 text-center">BDO</h3>
               <div className="text-center mb-4">
                 <img 

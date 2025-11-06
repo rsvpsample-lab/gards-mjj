@@ -59,7 +59,7 @@ const VenueSection = () => {
           <motion.div 
             key={index}
             className="bg-white border-0 rounded-3xl overflow-hidden"
-            style={{ boxShadow: '0 25px 60px -15px rgba(128, 0, 32, 0.6), 0 15px 30px -10px rgba(128, 0, 32, 0.5)' }}
+            style={{ boxShadow: '0 25px 60px -15px rgba(128, 0, 32, 0.4), 0 15px 30px -10px rgba(128, 0, 32, 0.3)' }}
             initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={animationsEnabled ? { duration: 0.8, delay: 7.2 + (index * 0.3) } : { duration: 0 }}
