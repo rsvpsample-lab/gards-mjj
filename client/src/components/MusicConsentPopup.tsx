@@ -26,7 +26,7 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="bg-white dark:bg-[#1a1a1a] rounded-2xl p-10 md:p-12 max-w-md w-full shadow-2xl"
+            className="bg-white rounded-2xl p-10 md:p-12 max-w-md w-full shadow-2xl"
           >
             <div className="text-center space-y-8">
               <motion.div
@@ -35,15 +35,15 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
                 transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
                 className="flex justify-center"
               >
-                <Music className="h-16 w-16 text-[#333333] dark:text-white" strokeWidth={1.5} />
+                <Music className="h-16 w-16 text-[#D4AF37]" strokeWidth={1.5} />
               </motion.div>
               
               <div className="space-y-3">
-                <h2 className="text-2xl md:text-3xl font-medium text-[#333333] dark:text-white">
+                <h2 className="text-2xl md:text-3xl font-medium text-[#800020]">
                   Play music?
                 </h2>
                 
-                <p className="text-[#666666] dark:text-[#aaaaaa] leading-relaxed text-sm md:text-base">
+                <p className="text-[#800020] leading-relaxed text-sm md:text-base">
                   Enhance your experience with background music
                 </p>
               </div>
