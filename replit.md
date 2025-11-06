@@ -170,3 +170,23 @@ Successfully migrated from Lovable to Replit environment:
   - Shows "Perfect Score!" message only for 5/5, "Amazing Score!" with actual score for 4/5
   - Implemented functional state updates for reliable score tracking
   - Adjusted invitation paper dimensions: wider (max-w-5xl) and shorter (reduced padding and spacing)
+- **2025-11-06**: Complete wedding details update for Gards & Mj:
+  - Updated couple names from previous couples to "Gards & Mj" throughout the website
+  - Changed wedding date from December 26, 2025 to December 02, 2025
+  - Updated countdown timer to December 02, 2025 at 3:00 PM
+  - Split venue section into two separate venues:
+    - Ceremony: Caleruega, Nasugbu, Batangas (with Google Maps link)
+    - Reception: Villa Ibarra, Tagaytay (with Google Maps link)
+  - Updated dress code color palette with new colors:
+    - Champagne (#F7E7CE)
+    - Taupe (#B38B6D)
+    - Beige (#E0D2C7)
+    - Blush Pink (#F4C2C2)
+    - Mauve (#D8B5D8)
+    - Deep Navy (#1C2951)
+    - Charcoal Gray (#36454F)
+    - Forest Green (#228B22)
+  - Updated dress code guidelines to avoid white, ivory, and black
+  - Updated SEO meta tags in index.html with new couple names and wedding date
+  - Updated footer with new couple names and reception venue
+  - All changes verified and tested successfully
