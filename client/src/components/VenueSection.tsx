@@ -9,15 +9,26 @@ const VenueSection = () => {
   const { animationsEnabled } = useAnimationContext();
   const venues = [
     {
-      title: 'Wedding Ceremony & Reception',
-      name: 'SOIREE EVENTS PLACE',
-      address: 'Please check the location details',
+      title: 'Wedding Ceremony',
+      name: 'CALERUEGA',
+      address: 'Caleruega, Nasugbu, Batangas',
       image: ceremonyImage,
-      mapUrl: 'https://maps.app.goo.gl/soiree-events-place',
-      mapEmbed: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Soiree+Events+Place&zoom=15',
-      description: 'Join us at Soiree Events Place for our wedding ceremony and reception. This beautiful venue will witness our vows of eternal love and host our celebration as we begin our journey together.',
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Caleruega+Nasugbu+Batangas',
+      mapEmbed: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Caleruega+Nasugbu+Batangas&zoom=15',
+      description: 'Join us at the beautiful Caleruega for our wedding ceremony. This serene venue will witness our vows of eternal love as we begin our journey together.',
       details: 'The ceremony begins promptly at 3:00 PM. Please arrive early to be seated.',
       startTime: '3:00 PM'
+    },
+    {
+      title: 'Wedding Reception',
+      name: 'VILLA IBARRA',
+      address: 'Villa Ibarra, Tagaytay',
+      image: ceremonyImage,
+      mapUrl: 'https://www.google.com/maps/search/?api=1&query=Villa+Ibarra+Tagaytay',
+      mapEmbed: 'https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Villa+Ibarra+Tagaytay&zoom=15',
+      description: 'Continue the celebration with us at Villa Ibarra in Tagaytay. This elegant venue will host our reception where we will celebrate with dinner, dancing, and joy.',
+      details: 'The reception will follow immediately after the ceremony. Dinner and dancing to follow.',
+      startTime: '5:00 PM'
     }
   ];
 

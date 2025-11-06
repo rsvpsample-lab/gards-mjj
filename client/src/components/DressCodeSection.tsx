@@ -82,11 +82,14 @@ const DressCodeSection = () => {
           
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { name: 'Brown', hex: '#B4947D' },
-              { name: 'Nude Pink', hex: '#E4C9B8' },
+              { name: 'Champagne', hex: '#F7E7CE' },
+              { name: 'Taupe', hex: '#B38B6D' },
               { name: 'Beige', hex: '#E0D2C7' },
-              { name: 'Pale Silver', hex: '#D2C3BE' },
-              { name: 'Light Grey', hex: '#BEBEBE' }
+              { name: 'Blush Pink', hex: '#F4C2C2' },
+              { name: 'Mauve', hex: '#D8B5D8' },
+              { name: 'Deep Navy', hex: '#1C2951' },
+              { name: 'Charcoal Gray', hex: '#36454F' },
+              { name: 'Forest Green', hex: '#228B22' }
             ].map((color, index) => (
               <motion.div
                 key={color.name}
@@ -150,16 +153,16 @@ const DressCodeSection = () => {
               </div>
             </div>
 
-            {/* No white colors */}
+            {/* Colors to avoid */}
             <div className="bg-card/20 rounded-xl p-6">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-gold mt-2 flex-shrink-0"></div>
                 <div>
                   <h4 className="text-base font-display font-semibold text-foreground mb-2">
-                    No white colors
+                    Colors to Avoid
                   </h4>
                   <p className="text-sm text-foreground/70">
-                    Avoid wearing white, as this color is reserved for the bride.
+                    Please avoid wearing white, ivory, or black to this celebration.
                   </p>
                 </div>
               </div>
