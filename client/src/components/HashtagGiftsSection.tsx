@@ -1,129 +1,79 @@
 import { motion } from 'framer-motion';
-import { Camera, Gift } from 'lucide-react';
 import giftQRCode from '@assets/gift_1762419093423.png';
+import prenupBackground from '@assets/3_1760525627712.jpg';
 
 const HashtagGiftsSection = () => {
   return (
     <motion.section 
       id="hashtag-gifts" 
-      className="section-pastel-blue py-12 px-4 relative overflow-hidden"
+      className="relative py-20 px-4 overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1, delay: 0.3 }}
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 border border-primary/30 rounded-full"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 border border-primary/30 rounded-full"></div>
-      </div>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${prenupBackground})`,
+          filter: 'brightness(0.7)'
+        }}
+      />
 
-      <div className="max-w-4xl mx-auto relative z-10 space-y-12">
-        {/* Oh Snap! Section */}
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/20" />
+
+      <div className="max-w-md mx-auto relative z-10">
+        {/* Gift Guide Card */}
         <motion.div 
-          className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 text-center"
+          className="bg-white dark:bg-gray-50 rounded-3xl p-10 shadow-2xl"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
         >
-          <motion.div
-            className="flex justify-center mb-6"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.7, type: "spring" }}
-          >
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-              <Camera className="w-8 h-8 text-primary" data-testid="icon-camera" />
-            </div>
-          </motion.div>
-
           <motion.h2 
-            className="font-display italic text-gold mb-4 text-[48px]"
+            className="font-display italic text-center mb-8 text-5xl text-gray-800"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            data-testid="text-ohsnap-title"
+            transition={{ duration: 0.6, delay: 0.7 }}
+            data-testid="text-gifts-title"
           >
-            Oh Snap!
+            Gift Guide
           </motion.h2>
 
           <motion.div
-            className="bg-card/20 border border-border/50 rounded-xl p-6 max-w-2xl mx-auto"
+            className="text-center space-y-6 mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.9 }}
           >
             <p 
-              className="text-lg text-foreground leading-relaxed"
-              data-testid="text-social-message"
+              className="text-base text-gray-600 leading-relaxed"
+              data-testid="text-gifts-message-1"
             >
-              We'd love to see the beautiful moments you capture on our special day!
-              <br />
-              <br />
-              Kindly mention us on our social media accounts when you share photos and videos from the celebration.
-            </p>
-          </motion.div>
-        </motion.div>
-
-        {/* Gifts Section */}
-        <motion.div 
-          className="bg-card/30 border border-border rounded-xl p-8 shadow-soft hover-elegant transition-all duration-500 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.7 }}
-        >
-          <motion.div
-            className="flex justify-center mb-6"
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.9, type: "spring" }}
-          >
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-              <Gift className="w-8 h-8 text-primary" data-testid="icon-gift" />
-            </div>
-          </motion.div>
-
-          <motion.h2 
-            className="font-display italic text-gold mb-6 text-[48px]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            data-testid="text-gifts-title"
-          >
-            Gifts
-          </motion.h2>
-
-          <motion.div
-            className="bg-card/20 border border-border/50 rounded-xl p-6 max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-          >
-            <p 
-              className="text-lg text-foreground leading-relaxed mb-6"
-              data-testid="text-gifts-message"
-            >
-              With all that we have, we've been truly blessed.
-              <br />
-              Your presence and prayers are all that we request.
-              <br />
-              But if to give nonetheless,
-              <br />
-              Monetary gift is one we suggest.
+              Your presence is the greatest gift we could ever receive.
             </p>
             
-            <motion.div
-              className="mt-8 flex justify-center"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 1.3 }}
+            <p 
+              className="text-base text-gray-600 leading-relaxed"
+              data-testid="text-gifts-message-2"
             >
-              <img 
-                src={giftQRCode} 
-                alt="BPI InstaPay QR Code for monetary gifts" 
-                className="max-w-xs w-full h-auto rounded-lg shadow-md"
-                data-testid="img-gift-qr-code"
-              />
-            </motion.div>
+              Should you wish to extend your generosity, a token of love and support toward our future together would be deeply appreciated.
+            </p>
+          </motion.div>
+          
+          <motion.div
+            className="mt-8 flex justify-center"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.1 }}
+          >
+            <img 
+              src={giftQRCode} 
+              alt="InstaPay QR Code for monetary gifts" 
+              className="max-w-xs w-full h-auto rounded-lg"
+              data-testid="img-gift-qr-code"
+            />
           </motion.div>
         </motion.div>
       </div>
