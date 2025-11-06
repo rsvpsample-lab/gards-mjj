@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import attireGuideImage from "@assets/attireguide (1)_1762337075374.png";
+import attireGuideImage from "@assets/Gemini_Generated_Image_b8wmd9b8wmd9b8wm (1)_1762421523418.png";
 
 const DressCodeSection = () => {
   return (
