@@ -69,18 +69,42 @@ const EntourageSection = () => {
             <div className="grid grid-cols-3 gap-6">
               <div data-testid="section-candle">
                 <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">Candle</h4>
-                <p className="text-black font-normal text-xs">Celine Kaye Potes</p>
-                <p className="text-black font-normal text-xs">John Paul Dominic Potes</p>
+                <p className="text-black font-normal text-xs">John Carlo Verzosa</p>
+                <p className="text-black font-normal text-xs">Maria Trisha Venasquez</p>
               </div>
               <div data-testid="section-veil">
                 <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">Veil</h4>
-                <p className="text-black font-normal text-xs">Melody Collado</p>
-                <p className="text-black font-normal text-xs">Robin Collado</p>
+                <p className="text-black font-normal text-xs">Mark Manuel Bacay</p>
+                <p className="text-black font-normal text-xs">Jemima Lois Rey</p>
               </div>
               <div data-testid="section-cord">
                 <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">Cord</h4>
-                <p className="text-black font-normal text-xs">Maria Christina Visaya</p>
-                <p className="text-black font-normal text-xs">Christian Visaya</p>
+                <p className="text-black font-normal text-xs">Jonathan Deomampo</p>
+                <p className="text-black font-normal text-xs">Mary Grace Bayola</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bridesmaid / Groomsmen Pairs - 2 COLUMNS */}
+          <div>
+            <h3 className="font-display italic text-lg text-[hsl(var(--burgundy))] mb-4" data-testid="heading-bridesmaid-groomsmen">Bridesmaid / Groomsmen</h3>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-2">
+              <div data-testid="section-1st-pair">
+                <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">1st Pair</h4>
+                <p className="text-black font-normal text-xs">Gheremie Sombilla</p>
+                <p className="text-black font-normal text-xs">Beryl Verzosa</p>
+              </div>
+              <div></div>
+              <div data-testid="section-2nd-pair">
+                <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">2nd Pair</h4>
+                <p className="text-black font-normal text-xs">Mark Joseph Bacay</p>
+                <p className="text-black font-normal text-xs">Jenny Vive Verzosa</p>
+              </div>
+              <div></div>
+              <div data-testid="section-3rd-pair">
+                <h4 className="font-bold italic text-xs text-[hsl(var(--gold))] mb-1">3rd Pair</h4>
+                <p className="text-black font-normal text-xs">Jacob Angelo Torino</p>
+                <p className="text-black font-normal text-xs">Alexandra Mae Verzosa</p>
               </div>
             </div>
           </div>

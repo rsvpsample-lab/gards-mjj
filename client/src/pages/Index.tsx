@@ -14,6 +14,7 @@ import VenueSection from '@/components/VenueSection';
 import DressCodeSection from '@/components/DressCodeSection';
 import HashtagGiftsSection from '@/components/HashtagGiftsSection';
 import RSVPSection from '@/components/RSVPSection';
+import EntourageSection from '@/components/EntourageSection';
 import MemorableMomentsSection from '@/components/MemorableMomentsSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
@@ -118,6 +119,7 @@ const Index = () => {
           <DressCodeSection />
           <HashtagGiftsSection />
           <RSVPSection />
+          <EntourageSection />
           <MemorableMomentsSection />
           <CoverSection
             imageUrl={cover3Image}
