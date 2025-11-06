@@ -96,7 +96,7 @@ const DressCodeSection = () => {
                   Gentlemen: Smart casual or business casual attire
                 </p>
                 <p className="text-sm text-foreground/80 text-center font-semibold">
-                  Ladies: Cocktail dress or dressy separates
+                  Ladies: Full Length Dress or Gown with Heels of Choice
                 </p>
               </div>
             </div>
