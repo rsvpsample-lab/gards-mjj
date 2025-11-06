@@ -146,7 +146,7 @@ const VenueSection = () => {
                 href={venue.mapUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-3 bg-foreground text-background rounded-lg hover:bg-foreground/90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-[hsl(var(--gold))] text-background rounded-lg hover:bg-[hsl(var(--gold))]/90 transition-all duration-300 font-medium shadow-lg hover:shadow-xl"
                 data-testid={`button-${venue.title.toLowerCase()}-location`}
               >
                 Get Directions
