@@ -142,6 +142,8 @@ const StorySection = () => {
       {/* Header */}
       <div className="text-center py-16 sm:py-20 px-4 relative z-10">
         <motion.div
+          className="max-w-3xl mx-auto bg-white rounded-3xl p-8 sm:p-12"
+          style={{ boxShadow: '0 20px 50px -10px rgba(216, 181, 181, 0.8)' }}
           initial={animationsEnabled ? { opacity: 0, y: 30 } : { opacity: 1, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={animationsEnabled ? { duration: 0.8, ease: "easeOut", delay: 3.8 } : { duration: 0 }}
@@ -184,11 +186,9 @@ const StorySection = () => {
               style={{ width: '100vw', minWidth: '100vw' }}
             >
               <div 
-                className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center h-full relative overflow-hidden rounded-3xl p-8 transition-all duration-300 bg-black/5 dark:bg-white/5 border border-white/10 backdrop-blur-sm"
+                className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center h-full relative overflow-hidden rounded-3xl p-8 transition-all duration-300 bg-white border-0"
                 style={{
-                  background: mousePosition[card.id] 
-                    ? `radial-gradient(600px circle at ${mousePosition[card.id].x}px ${mousePosition[card.id].y}px, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02) 40%), rgba(0, 0, 0, 0.05)`
-                    : 'rgba(0, 0, 0, 0.05)'
+                  boxShadow: '0 20px 50px -10px rgba(216, 181, 181, 0.8)'
                 }}
                 onMouseMove={(e) => handleMouseMove(e, card.id)}
                 onMouseLeave={() => handleMouseLeave(card.id)}
@@ -249,7 +249,8 @@ const StorySection = () => {
 
           {/* Final "The Vow" Section */}
           <div className="story-card flex-shrink-0 w-screen h-full flex items-center justify-center px-4 sm:px-8 py-8 sm:py-12">
-            <div className="max-w-4xl mx-auto text-center relative">
+            <div className="max-w-4xl mx-auto text-center relative bg-white rounded-3xl p-8 sm:p-12"
+                 style={{ boxShadow: '0 20px 50px -10px rgba(216, 181, 181, 0.8)' }}>
               {/* Background SVG */}
               <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 800 600">
                 <defs>
