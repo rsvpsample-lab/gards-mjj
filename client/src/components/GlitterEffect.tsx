@@ -15,14 +15,14 @@ export const GlitterEffect = () => {
   useEffect(() => {
     const createGlitters = () => {
       const newGlitters: Glitter[] = [];
-      const glitterCount = 50;
+      const glitterCount = 15;
 
       for (let i = 0; i < glitterCount; i++) {
         newGlitters.push({
           id: i,
           left: Math.random() * 100,
-          animationDuration: 3 + Math.random() * 4,
-          animationDelay: Math.random() * 5,
+          animationDuration: 8 + Math.random() * 6,
+          animationDelay: Math.random() * 10,
           size: 4 + Math.random() * 8,
           opacity: 0.3 + Math.random() * 0.7,
         });
