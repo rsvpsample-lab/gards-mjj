@@ -54,7 +54,7 @@ const FAQSection = () => {
           <h2 className="text-5xl font-display italic text-[hsl(var(--burgundy))] mb-8" data-testid="text-faq-title">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg font-body text-foreground max-w-2xl mx-auto">
+          <p className="text-lg font-body text-[hsl(var(--burgundy))]/70 max-w-2xl mx-auto">
             We've compiled answers to the most common questions about our wedding day. 
             If you have additional questions, please don't hesitate to contact us.
           </p>
@@ -93,7 +93,7 @@ const FAQSection = () => {
               {openItems.includes(index) && (
                 <div className="px-8 pb-6">
                   <div className="w-full h-px bg-border mb-4"></div>
-                  <p className="text-foreground leading-relaxed">
+                  <p className="text-[hsl(var(--burgundy))]/80 leading-relaxed">
                     {faq.answer}
                   </p>
                 </div>

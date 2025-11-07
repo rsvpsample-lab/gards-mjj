@@ -53,6 +53,32 @@ const VenueSection = () => {
         </h1>
       </motion.div>
 
+      {/* Unplugged Ceremony Notice */}
+      <motion.div 
+        className="max-w-4xl mx-auto mb-16"
+        initial={animationsEnabled ? { opacity: 0, y: 20 } : { opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={animationsEnabled ? { duration: 0.8, delay: 7.0 } : { duration: 0 }}
+      >
+        <div className="bg-white border-0 rounded-2xl p-8 text-center" style={{ boxShadow: '0 20px 40px -10px rgba(216, 181, 181, 0.25), 0 10px 20px -5px rgba(216, 181, 181, 0.2)' }}>
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-[hsl(var(--gold))]/20 rounded-full mb-4">
+            <svg className="w-8 h-8 text-[hsl(var(--gold))]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+              <line x1="12" y1="18" x2="12.01" y2="18"/>
+              <line x1="2" y1="2" x2="22" y2="22"/>
+            </svg>
+          </div>
+          <h3 className="text-2xl font-display font-semibold mb-3 text-[hsl(var(--burgundy))]" data-testid="text-unplugged-ceremony-title">
+            Unplugged Ceremony
+          </h3>
+          <p className="text-lg text-[hsl(var(--burgundy))]/80 leading-relaxed max-w-2xl mx-auto" data-testid="text-unplugged-ceremony-message">
+            We kindly request that you turn off your phones and cameras during our ceremony. 
+            We have hired a professional photographer to capture these precious moments. 
+            Please be fully present with us as we exchange our vows.
+          </p>
+        </div>
+      </motion.div>
+
       {/* Venues */}
       <div className="space-y-20 max-w-6xl mx-auto">
         {venues.map((venue, index) => (
@@ -69,10 +95,10 @@ const VenueSection = () => {
               <h2 className="text-3xl md:text-4xl font-display italic text-[hsl(var(--burgundy))] mb-4" data-testid={`text-${venue.title.toLowerCase()}-title`}>
                 {venue.title}
               </h2>
-              <h3 className="text-xl md:text-2xl font-display italic text-foreground/80 mb-3" data-testid={`text-${venue.title.toLowerCase()}-name`}>
+              <h3 className="text-xl md:text-2xl font-display italic text-[hsl(var(--burgundy))] mb-3" data-testid={`text-${venue.title.toLowerCase()}-name`}>
                 {venue.name}
               </h3>
-              <div className="flex items-center justify-center gap-2 text-muted-foreground">
+              <div className="flex items-center justify-center gap-2 text-[hsl(var(--burgundy))]/70">
                 <MapPin className="w-4 h-4 text-[hsl(var(--gold))]" />
                 <p className="text-sm" data-testid={`text-${venue.title.toLowerCase()}-address`}>
                   {venue.address}
@@ -100,10 +126,10 @@ const VenueSection = () => {
                 <h4 className="text-xs font-semibold uppercase tracking-widest text-foreground/60 border-l-2 border-[hsl(var(--gold))] pl-3">
                   About the Venue
                 </h4>
-                <p className="text-foreground/80 leading-relaxed pl-3" data-testid={`text-${venue.title.toLowerCase()}-description`}>
+                <p className="text-[hsl(var(--burgundy))]/80 leading-relaxed pl-3" data-testid={`text-${venue.title.toLowerCase()}-description`}>
                   {venue.description}
                 </p>
-                <p className="text-sm text-foreground/70 italic pl-3" data-testid={`text-${venue.title.toLowerCase()}-details`}>
+                <p className="text-sm text-[hsl(var(--burgundy))]/70 italic pl-3" data-testid={`text-${venue.title.toLowerCase()}-details`}>
                   {venue.details}
                 </p>
               </div>
@@ -135,8 +161,8 @@ const VenueSection = () => {
                   <Clock className="w-5 h-5 text-[hsl(var(--gold))]" />
                 </div>
                 <div>
-                  <p className="text-xs text-foreground/60 uppercase tracking-wide">Start Time</p>
-                  <p className="text-lg font-semibold text-foreground" data-testid={`text-${venue.title.toLowerCase()}-start-time`}>
+                  <p className="text-xs text-[hsl(var(--burgundy))]/60 uppercase tracking-wide">Start Time</p>
+                  <p className="text-lg font-semibold text-[hsl(var(--burgundy))]" data-testid={`text-${venue.title.toLowerCase()}-start-time`}>
                     {venue.startTime}
                   </p>
                 </div>

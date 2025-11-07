@@ -151,7 +151,7 @@ const StorySection = () => {
           <h2 className="text-4xl sm:text-5xl font-script italic font-black mb-6 sm:mb-8 text-[hsl(var(--burgundy))]" data-testid="text-story-title">
             Together Forever
           </h2>
-          <p className="text-base sm:text-lg max-w-2xl mx-auto mb-4 text-foreground/90">
+          <p className="text-base sm:text-lg max-w-2xl mx-auto mb-4 text-[hsl(var(--burgundy))]/80">
             Scroll to discover our commitment to each other
           </p>
           
@@ -204,7 +204,7 @@ const StorySection = () => {
                     {card.title}
                   </h3>
                   
-                  <p className="text-lg sm:text-xl leading-relaxed text-foreground/90" data-testid={`text-story-card-${card.id}-text`}>
+                  <p className="text-lg sm:text-xl leading-relaxed text-[hsl(var(--burgundy))]/80" data-testid={`text-story-card-${card.id}-text`}>
                     {card.text}
                   </p>
 
@@ -276,10 +276,10 @@ const StorySection = () => {
                 </h3>
                 
                 <div className="max-w-2xl mx-auto">
-                  <p className="text-xl sm:text-2xl leading-relaxed italic mb-4 text-foreground">
+                  <p className="text-xl sm:text-2xl leading-relaxed italic mb-4 text-[hsl(var(--burgundy))]/85">
                     "Above all, clothe yourselves with love, which binds us all together in perfect harmony."
                   </p>
-                  <p className="text-base sm:text-lg font-body text-foreground/80">
+                  <p className="text-base sm:text-lg font-body text-[hsl(var(--burgundy))]/75">
                     Colossians 3:14
                   </p>
                 </div>

@@ -65,7 +65,7 @@ const CountdownSection = () => {
             </h2>
             <Heart className="w-8 h-8 text-[hsl(var(--gold))] fill-[hsl(var(--gold))]" />
           </div>
-          <p className="text-xl md:text-2xl text-foreground/80 font-light">
+          <p className="text-xl md:text-2xl text-[hsl(var(--burgundy))]/70 font-light">
             Until we say "I Do"
           </p>
         </motion.div>
@@ -80,7 +80,7 @@ const CountdownSection = () => {
         >
           <Calendar className="w-6 h-6 text-[hsl(var(--gold))]" />
           <div>
-            <p className="text-sm text-foreground/60 uppercase tracking-wider">Wedding Day</p>
+            <p className="text-sm text-[hsl(var(--burgundy))]/60 uppercase tracking-wider">Wedding Day</p>
             <p className="text-2xl font-display font-semibold text-[hsl(var(--burgundy))]">
               December 02, 2025
             </p>
@@ -133,7 +133,7 @@ const CountdownSection = () => {
               </motion.div>
 
               {/* Label */}
-              <div className="text-sm md:text-base font-body uppercase tracking-widest text-foreground/70 font-medium">
+              <div className="text-sm md:text-base font-body uppercase tracking-widest text-[hsl(var(--burgundy))]/70 font-medium">
                 {item.label}
               </div>
 
@@ -151,7 +151,7 @@ const CountdownSection = () => {
           animate={{ opacity: 1 }}
           transition={animationsEnabled ? { duration: 0.8, delay: 1.5 } : { duration: 0 }}
         >
-          <p className="text-lg md:text-xl text-foreground/70 italic font-light">
+          <p className="text-lg md:text-xl text-[hsl(var(--burgundy))]/70 italic font-light">
             Every second brings us closer to forever
           </p>
         </motion.div>

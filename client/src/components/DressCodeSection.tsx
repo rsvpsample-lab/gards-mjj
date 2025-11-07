@@ -44,7 +44,7 @@ const DressCodeSection = () => {
                     FORMAL ATTIRE
                   </h3>
                   <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
-                    <span className="text-sm font-normal text-foreground">For Principal Sponsors</span>
+                    <span className="text-sm font-normal text-[hsl(var(--burgundy))]">For Principal Sponsors</span>
                   </div>
                 </div>
               </motion.div>
@@ -58,10 +58,10 @@ const DressCodeSection = () => {
                 data-testid="img-attire-guide-formal"
               />
               <div className="mt-6 grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-                <p className="text-sm text-foreground/80 text-center font-semibold">
+                <p className="text-sm text-[hsl(var(--burgundy))]/80 text-center font-semibold">
                   Gentlemen: Suits and Ties or Long Sleeves with Closed Shoes
                 </p>
-                <p className="text-sm text-foreground/80 text-center font-semibold">
+                <p className="text-sm text-[hsl(var(--burgundy))]/80 text-center font-semibold">
                   Ladies: Full Length Dress or Gown with Heels of Choice
                 </p>
               </div>
@@ -88,7 +88,7 @@ const DressCodeSection = () => {
                     SEMI-FORMAL ATTIRE
                   </h3>
                   <div className="inline-block px-4 py-2 bg-primary/10 rounded-full">
-                    <span className="text-sm font-normal text-foreground">For Guests</span>
+                    <span className="text-sm font-normal text-[hsl(var(--burgundy))]">For Guests</span>
                   </div>
                 </div>
               </motion.div>
@@ -102,10 +102,10 @@ const DressCodeSection = () => {
                 data-testid="img-attire-guide-guests"
               />
               <div className="mt-6 grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-                <p className="text-sm text-foreground/80 text-center font-semibold">
+                <p className="text-sm text-[hsl(var(--burgundy))]/80 text-center font-semibold">
                   Gentlemen: Smart casual or business casual attire
                 </p>
-                <p className="text-sm text-foreground/80 text-center font-semibold">
+                <p className="text-sm text-[hsl(var(--burgundy))]/80 text-center font-semibold">
                   Ladies: Full Length Dress or Gown with Heels of Choice
                 </p>
               </div>
@@ -122,7 +122,7 @@ const DressCodeSection = () => {
           transition={{ duration: 0.8, ease: "easeOut", delay: 9.0 }}
         >
           <h3 className="text-2xl font-display text-[hsl(var(--burgundy))] text-center mb-6">Color Palette Recommendation</h3>
-          <p className="text-sm text-foreground/70 text-center mb-8">
+          <p className="text-sm text-[hsl(var(--burgundy))]/70 text-center mb-8">
             We recommend these elegant tones to complement our wedding theme
           </p>
           
@@ -151,8 +151,8 @@ const DressCodeSection = () => {
                   title={color.hex}
                 />
                 <div className="text-center">
-                  <p className="text-sm font-semibold text-foreground">{color.name}</p>
-                  <p className="text-xs text-foreground/60 font-mono">{color.hex}</p>
+                  <p className="text-sm font-semibold text-[hsl(var(--burgundy))]">{color.name}</p>
+                  <p className="text-xs text-[hsl(var(--burgundy))]/60 font-mono">{color.hex}</p>
                 </div>
               </motion.div>
             ))}
@@ -175,10 +175,10 @@ const DressCodeSection = () => {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[hsl(var(--gold))] mt-2 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-base font-display font-semibold text-foreground mb-2">
+                  <h4 className="text-base font-display font-semibold text-[hsl(var(--burgundy))] mb-2">
                     Gentlemen: Suits and Ties or Long Sleeves with Closed Shoes
                   </h4>
-                  <p className="text-sm text-foreground/70">
+                  <p className="text-sm text-[hsl(var(--burgundy))]/70">
                     Please dress elegantly in formal attire with closed shoes.
                   </p>
                 </div>
@@ -190,10 +190,10 @@ const DressCodeSection = () => {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[hsl(var(--gold))] mt-2 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-base font-display font-semibold text-foreground mb-2">
+                  <h4 className="text-base font-display font-semibold text-[hsl(var(--burgundy))] mb-2">
                     Ladies: Full Length Dress or Gown with Heels of Choice
                   </h4>
-                  <p className="text-sm text-foreground/70">
+                  <p className="text-sm text-[hsl(var(--burgundy))]/70">
                     Please wear a full-length dress or gown with your choice of heels.
                   </p>
                 </div>
@@ -205,10 +205,10 @@ const DressCodeSection = () => {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[hsl(var(--gold))] mt-2 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-base font-display font-semibold text-foreground mb-2">
+                  <h4 className="text-base font-display font-semibold text-[hsl(var(--burgundy))] mb-2">
                     Colors to Avoid
                   </h4>
-                  <p className="text-sm text-foreground/70">
+                  <p className="text-sm text-[hsl(var(--burgundy))]/70">
                     Please avoid wearing white, ivory, or black to this celebration.
                   </p>
                 </div>
@@ -220,10 +220,10 @@ const DressCodeSection = () => {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 rounded-full bg-[hsl(var(--gold))] mt-2 flex-shrink-0"></div>
                 <div>
-                  <h4 className="text-base font-display font-semibold text-foreground mb-2">
+                  <h4 className="text-base font-display font-semibold text-[hsl(var(--burgundy))] mb-2">
                     Respectful attire
                   </h4>
-                  <p className="text-sm text-foreground/70">
+                  <p className="text-sm text-[hsl(var(--burgundy))]/70">
                     Kindly ensure your attire is respectful and appropriate for a religious ceremony.
                   </p>
                 </div>
