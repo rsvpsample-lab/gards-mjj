@@ -49,8 +49,8 @@ const HeroSection = () => {
         </div>
       </div>
       
-      {/* Names - Centered */}
-      <div className="relative z-10 w-full h-full flex items-center justify-center px-8">
+      {/* Names - Left Side Centered Vertically */}
+      <div className="relative z-10 w-full h-full flex items-center justify-start px-8 md:px-16 lg:px-24">
         {animationsEnabled ? (
           <TypeAnimation
             sequence={[
@@ -70,7 +70,7 @@ const HeroSection = () => {
               lineHeight: 1,
               color: 'white',
               textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
-              textAlign: 'center'
+              textAlign: 'left'
             }}
             cursor={true}
             repeat={0}
@@ -87,7 +87,7 @@ const HeroSection = () => {
               lineHeight: 1,
               color: 'white',
               textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
-              textAlign: 'center'
+              textAlign: 'left'
             }}
             data-testid="text-main-names"
           >
