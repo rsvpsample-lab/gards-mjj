@@ -52,7 +52,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/50" style={{ zIndex: 2 }}></div>
       
       {/* Date - Top Right */}
-      <div className={`absolute top-24 md:top-32 lg:top-40 right-8 md:right-16 lg:right-24 transition-all duration-700 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
+      <div className={`absolute top-24 md:top-32 lg:top-40 right-8 md:right-16 lg:right-24 transition-opacity duration-700 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`} style={{ zIndex: 3 }}>
         <div 
           className="text-right"
           style={{
