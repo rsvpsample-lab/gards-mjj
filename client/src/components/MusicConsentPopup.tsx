@@ -39,11 +39,11 @@ const MusicConsentPopup = ({ onConsent, isVisible }: MusicConsentPopupProps) => 
               </motion.div>
               
               <div className="space-y-3">
-                <h2 className="text-2xl md:text-3xl font-medium text-[#800020]">
+                <h2 className="text-2xl md:text-3xl font-medium text-[#D4AF37]">
                   Play music?
                 </h2>
                 
-                <p className="text-[#800020] leading-relaxed text-sm md:text-base">
+                <p className="text-[#D4AF37] leading-relaxed text-sm md:text-base">
                   Enhance your experience with background music
                 </p>
               </div>
