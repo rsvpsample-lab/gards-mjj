@@ -1,12 +1,28 @@
 import { TypeAnimation } from 'react-type-animation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 import { ChevronDown } from 'lucide-react';
-import heroImage from '@assets/hero-section_1762419093424.jpg';
+import heroImage1 from '@assets/hero-section_1762419093424.jpg';
+import heroImage2 from '@assets/2_1762508400571.jpg';
+import heroImage3 from '@assets/3_1762508400573.jpg';
+import heroImage4 from '@assets/4_1762508400573.jpg';
+import heroImage5 from '@assets/5_1762508400574.jpg';
+import heroImage6 from '@assets/6_1762508400574.jpg';
 
 const HeroSection = () => {
   const [showElements, setShowElements] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { animationsEnabled } = useAnimationContext();
+
+  const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5, heroImage6];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   const scrollToNext = () => {
     const nextSection = document.querySelector('section:nth-of-type(2)');
@@ -20,11 +36,18 @@ const HeroSection = () => {
       className="hero-section relative h-screen flex items-center justify-center overflow-hidden"
       data-testid="hero-section"
     >
-      {/* Image Background */}
-      <div 
-        className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
+      {/* Image Background Slideshow */}
+      {heroImages.map((image, index) => (
+        <div 
+          key={index}
+          className="absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000"
+          style={{ 
+            backgroundImage: `url(${image})`,
+            opacity: currentImageIndex === index ? 1 : 0,
+            zIndex: currentImageIndex === index ? 1 : 0
+          }}
+        />
+      ))}
       
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/30"></div>
