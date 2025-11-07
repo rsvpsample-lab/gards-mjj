@@ -86,7 +86,7 @@ const Index = () => {
         data-testid="background-audio"
       >
         <source
-          src="https://res.cloudinary.com/do4iuaiea/video/upload/v1760599475/ytmp3free.cc_adie-tahanan-lyrics-youtubemp3free.org_kwrlvo.mp3"
+          src="https://res.cloudinary.com/dsicpzepi/video/upload/v1762510143/ytmp3free.cc_elliot-james-reay-i-think-they-call-this-love-official-music-video-youtubemp3free.org_g8pdoi.mp3"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
