@@ -1,199 +1,178 @@
 import { TypeAnimation } from 'react-type-animation';
 import { useState } from 'react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
+import { ChevronDown } from 'lucide-react';
 import heroImage from '@assets/hero-section_1762419093424.jpg';
 
 const HeroSection = () => {
   const [showElements, setShowElements] = useState(false);
   const { animationsEnabled } = useAnimationContext();
 
+  const scrollToNext = () => {
+    const nextSection = document.querySelector('section:nth-of-type(2)');
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section 
-      className="hero-section relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="hero-section relative h-screen flex items-center justify-center overflow-hidden"
+      data-testid="hero-section"
     >
       {/* Image Background */}
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      {/* Cinematic gradient overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
-      {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <div className="mb-8">
-          <h1 className="text-7xl md:text-8xl lg:text-9xl xl:text-[10rem] text-white tracking-wide leading-tight" data-testid="text-main-invitation" style={{ fontFamily: 'Boska, serif', fontWeight: 300 }}>
+      
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/30"></div>
+      
+      {/* Content Container */}
+      <div className="relative z-10 w-full h-full flex items-center justify-between px-8 md:px-16 lg:px-24">
+        
+        {/* Left Side - Names */}
+        <div className="flex-1 flex items-start justify-start pt-20 md:pt-32">
+          <div className="text-left">
             {animationsEnabled ? (
               <TypeAnimation
                 sequence={[
-                  'GARDS\n&\nMJ',
+                  'Gards\n&\nMj',
                   () => {
                     setShowElements(true);
                   }
                 ]}
-                wrapper="span"
+                wrapper="h1"
                 speed={{ type: 'keyStrokeDelayInMs', value: 273 }}
                 style={{ 
                   whiteSpace: 'pre-line',
-                  display: 'inline-block'
+                  display: 'block',
+                  fontFamily: 'Boska, serif',
+                  fontWeight: 300,
+                  fontSize: 'clamp(3rem, 8vw, 6rem)',
+                  lineHeight: 1.1,
+                  color: 'white',
+                  textShadow: '2px 2px 8px rgba(0,0,0,0.3)'
                 }}
                 cursor={true}
                 repeat={0}
-                className="typewriter-text"
+                data-testid="text-main-names"
               />
             ) : (
-              <span 
+              <h1 
                 style={{ 
                   whiteSpace: 'pre-line',
-                  display: 'inline-block'
+                  display: 'block',
+                  fontFamily: 'Boska, serif',
+                  fontWeight: 300,
+                  fontSize: 'clamp(3rem, 8vw, 6rem)',
+                  lineHeight: 1.1,
+                  color: 'white',
+                  textShadow: '2px 2px 8px rgba(0,0,0,0.3)'
                 }}
-                className="typewriter-text"
+                data-testid="text-main-names"
               >
-                GARDS
+                Gards
                 <br />
                 &
                 <br />
-                MJ
-              </span>
+                Mj
+              </h1>
             )}
-          </h1>
+          </div>
         </div>
 
-        <div className={`transition-all duration-700 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-8 mb-10 max-w-lg mx-auto shadow-2xl">
-            <div className="space-y-3">
-              <div className="text-center">
-                <p className="text-lg sm:text-xl text-white font-light tracking-wide font-times" data-testid="text-date">
-                  12.02.2025 | Tuesday
-                </p>
-              </div>
-              <div className="text-center">
-                <p className="text-lg sm:text-xl text-white font-light tracking-wide font-times" data-testid="text-venue">
-                  CALERUEGA
-                </p>
-              </div>
+        {/* Right Side - Date */}
+        <div className={`flex-1 flex items-start justify-end pt-20 md:pt-32 transition-all duration-700 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
+          <div className="text-right">
+            <div 
+              className="text-white"
+              style={{
+                fontFamily: 'Boska, serif',
+                fontWeight: 300,
+                fontSize: 'clamp(2rem, 5vw, 4rem)',
+                lineHeight: 1.2,
+                textShadow: '2px 2px 8px rgba(0,0,0,0.3)'
+              }}
+              data-testid="text-wedding-date"
+            >
+              <div>12</div>
+              <div>02</div>
+              <div>25</div>
             </div>
           </div>
-          
-          {/* RSVP Button */}
-          <div className={`transition-all duration-700 opacity-100 mt-[10px] mb-[10px] ${animationsEnabled ? 'animate-fade-scale' : ''}`}>
-            <button
-              onClick={() => {
-                const rsvpSection = document.getElementById('rsvp');
-                if (rsvpSection) {
-                  const navHeight = 64;
-                  const elementTop = rsvpSection.offsetTop - navHeight;
-                  window.scrollTo({
-                    top: Math.max(0, elementTop),
-                    behavior: 'smooth'
-                  });
-                }
-              }}
-              className="animated-rsvp-btn"
-              aria-label="RSVP to Wedding"
-              data-testid="button-rsvp-hero"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span className="bg-card"></span>
-              <span>RSVP</span>
-            </button>
-          </div>
         </div>
-
       </div>
-      {/* Improved mobile responsiveness */}
+
+      {/* Scroll Indicator - Bottom Center */}
+      <div 
+        className={`absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center cursor-pointer transition-all duration-700 hover:opacity-80 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}
+        onClick={scrollToNext}
+        data-testid="scroll-indicator"
+      >
+        <p 
+          className="text-white text-sm tracking-widest mb-2"
+          style={{
+            fontFamily: 'Satoshi, sans-serif',
+            fontWeight: 400,
+            letterSpacing: '0.2em',
+            textShadow: '1px 1px 4px rgba(0,0,0,0.3)'
+          }}
+        >
+          SCROLL
+        </p>
+        <ChevronDown 
+          className="text-white animate-bounce" 
+          size={28}
+          style={{
+            filter: 'drop-shadow(1px 1px 4px rgba(0,0,0,0.3))'
+          }}
+        />
+      </div>
+
+      {/* Mobile Styles */}
       <style>{`
         .hero-section {
-          min-height: 100vh !important;
+          background-attachment: fixed;
         }
-        @media (min-width: 768px) {
-          .hero-section {
-            min-height: 100vh !important;
-          }
-        }
-        @media (max-width: 767px) {
+        
+        @media (max-width: 768px) {
           .hero-section {
             background-attachment: scroll !important;
-            background-size: cover !important;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
-            min-height: 100vh !important;
           }
+          
+          .hero-section > div:nth-child(3) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            gap: 3rem;
+          }
+          
+          .hero-section > div:nth-child(3) > div:first-child,
+          .hero-section > div:nth-child(3) > div:last-child {
+            padding-top: 0 !important;
+            text-align: center !important;
+            justify-content: center !important;
+          }
+          
           .hero-section h1 {
-            font-size: 2.5rem !important;
-            line-height: 1.2 !important;
+            text-align: center !important;
           }
-          .hero-section .bg-white\\/10 {
-            padding: 1.5rem !important;
-            margin-bottom: 2rem !important;
+          
+          .hero-section > div:nth-child(3) > div:last-child > div {
+            text-align: center !important;
           }
         }
-
-
-        /* Animated RSVP Button */
-        .animated-rsvp-btn {
-          font-family: Arial, Helvetica, sans-serif;
-          font-weight: bold;
-          color: hsl(var(--primary-foreground));
-          background-color: hsl(var(--primary));
-          padding: 1em 2em;
-          border: none;
-          border-radius: 0;
-          position: relative;
-          cursor: pointer;
-          overflow: hidden;
-        }
-
-        .animated-rsvp-btn span:not(:nth-child(6)) {
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-          height: 30px;
-          width: 30px;
-          background-color: hsl(var(--accent));
-          border-radius: 50%;
-          transition: .6s ease;
-        }
-
-        .animated-rsvp-btn span:nth-child(6) {
-          position: relative;
-        }
-
-        .animated-rsvp-btn span:nth-child(1) {
-          transform: translate(-3.3em, -4em);
-        }
-
-        .animated-rsvp-btn span:nth-child(2) {
-          transform: translate(-6em, 1.3em);
-        }
-
-        .animated-rsvp-btn span:nth-child(3) {
-          transform: translate(-.2em, 1.8em);
-        }
-
-        .animated-rsvp-btn span:nth-child(4) {
-          transform: translate(3.5em, 1.4em);
-        }
-
-        .animated-rsvp-btn span:nth-child(5) {
-          transform: translate(3.5em, -3.8em);
-        }
-
-        .animated-rsvp-btn:hover span:not(:nth-child(6)) {
-          transform: translate(-50%, -50%) scale(4);
-          transition: 1.5s ease;
-        }
-
+        
         /* Custom underscore cursor for TypeAnimation */
-        .typewriter-text .react-type-animation-cursor {
+        .react-type-animation-cursor {
           color: white;
           animation: blink 1.2s infinite;
         }
 
-        .typewriter-text .react-type-animation-cursor::after {
+        .react-type-animation-cursor::after {
           content: '_';
           font-weight: bold;
         }
