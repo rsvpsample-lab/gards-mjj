@@ -30,7 +30,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/30"></div>
       
       {/* Content Container */}
-      <div className="relative z-10 w-full h-full flex justify-between items-start px-8 md:px-16 lg:px-24 pt-24 md:pt-32 lg:pt-40">
+      <div className="relative z-10 w-full h-full flex justify-between items-center px-8 md:px-16 lg:px-24">
         
         {/* Left Side - Names */}
         <div className="flex flex-col items-start">
@@ -51,7 +51,7 @@ const HeroSection = () => {
                 fontWeight: 300,
                 fontSize: 'clamp(3rem, 10vw, 7rem)',
                 lineHeight: 1,
-                color: 'white',
+                color: '#FFD700',
                 textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
                 textAlign: 'left'
               }}
@@ -68,7 +68,7 @@ const HeroSection = () => {
                 fontWeight: 300,
                 fontSize: 'clamp(3rem, 10vw, 7rem)',
                 lineHeight: 1,
-                color: 'white',
+                color: '#FFD700',
                 textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
                 textAlign: 'left'
               }}
@@ -86,12 +86,13 @@ const HeroSection = () => {
         {/* Right Side - Date */}
         <div className={`flex flex-col items-end transition-all duration-700 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
           <div 
-            className="text-white text-right"
+            className="text-right"
             style={{
               fontFamily: 'Boska, serif',
               fontWeight: 300,
               fontSize: 'clamp(2.5rem, 8vw, 5.5rem)',
               lineHeight: 1,
+              color: '#FFD700',
               textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
             }}
             data-testid="text-wedding-date"
@@ -122,7 +123,7 @@ const HeroSection = () => {
         
         /* Custom underscore cursor for TypeAnimation */
         .react-type-animation-cursor {
-          color: white;
+          color: #FFD700;
           animation: blink 1.2s infinite;
         }
 
