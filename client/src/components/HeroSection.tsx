@@ -29,79 +29,75 @@ const HeroSection = () => {
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-black/30"></div>
       
-      {/* Content Container */}
-      <div className="relative z-10 w-full h-full flex justify-between items-center px-8 md:px-16 lg:px-24">
-        
-        {/* Left Side - Names */}
-        <div className="flex flex-col items-start">
-          {animationsEnabled ? (
-            <TypeAnimation
-              sequence={[
-                'Gards\n&\nMj',
-                () => {
-                  setShowElements(true);
-                }
-              ]}
-              wrapper="h1"
-              speed={{ type: 'keyStrokeDelayInMs', value: 273 }}
-              style={{ 
-                whiteSpace: 'pre-line',
-                display: 'block',
-                fontFamily: 'Boska, serif',
-                fontWeight: 300,
-                fontSize: 'clamp(3rem, 10vw, 7rem)',
-                lineHeight: 1,
-                color: '#FFD700',
-                textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
-                textAlign: 'left'
-              }}
-              cursor={true}
-              repeat={0}
-              data-testid="text-main-names"
-            />
-          ) : (
-            <h1 
-              style={{ 
-                whiteSpace: 'pre-line',
-                display: 'block',
-                fontFamily: 'Boska, serif',
-                fontWeight: 300,
-                fontSize: 'clamp(3rem, 10vw, 7rem)',
-                lineHeight: 1,
-                color: '#FFD700',
-                textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
-                textAlign: 'left'
-              }}
-              data-testid="text-main-names"
-            >
-              Gards
-              <br />
-              &
-              <br />
-              Mj
-            </h1>
-          )}
+      {/* Date - Top Right */}
+      <div className={`absolute top-24 md:top-32 lg:top-40 right-8 md:right-16 lg:right-24 transition-all duration-700 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
+        <div 
+          className="text-right"
+          style={{
+            fontFamily: 'Boska, serif',
+            fontWeight: 300,
+            fontSize: 'clamp(2.5rem, 8vw, 5.5rem)',
+            lineHeight: 1,
+            color: 'white',
+            textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
+          }}
+          data-testid="text-wedding-date"
+        >
+          <div>12</div>
+          <div>02</div>
+          <div>25</div>
         </div>
-
-        {/* Right Side - Date */}
-        <div className={`flex flex-col items-end transition-all duration-700 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
-          <div 
-            className="text-right"
-            style={{
+      </div>
+      
+      {/* Names - Centered */}
+      <div className="relative z-10 w-full h-full flex items-center justify-center px-8">
+        {animationsEnabled ? (
+          <TypeAnimation
+            sequence={[
+              'Gards\n&\nMj',
+              () => {
+                setShowElements(true);
+              }
+            ]}
+            wrapper="h1"
+            speed={{ type: 'keyStrokeDelayInMs', value: 273 }}
+            style={{ 
+              whiteSpace: 'pre-line',
+              display: 'block',
               fontFamily: 'Boska, serif',
               fontWeight: 300,
-              fontSize: 'clamp(2.5rem, 8vw, 5.5rem)',
+              fontSize: 'clamp(3rem, 10vw, 7rem)',
               lineHeight: 1,
-              color: '#FFD700',
-              textShadow: '2px 2px 8px rgba(0,0,0,0.5)'
+              color: 'white',
+              textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
+              textAlign: 'center'
             }}
-            data-testid="text-wedding-date"
+            cursor={true}
+            repeat={0}
+            data-testid="text-main-names"
+          />
+        ) : (
+          <h1 
+            style={{ 
+              whiteSpace: 'pre-line',
+              display: 'block',
+              fontFamily: 'Boska, serif',
+              fontWeight: 300,
+              fontSize: 'clamp(3rem, 10vw, 7rem)',
+              lineHeight: 1,
+              color: 'white',
+              textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
+              textAlign: 'center'
+            }}
+            data-testid="text-main-names"
           >
-            <div>12</div>
-            <div>02</div>
-            <div>25</div>
-          </div>
-        </div>
+            Gards
+            <br />
+            &
+            <br />
+            Mj
+          </h1>
+        )}
       </div>
 
       {/* Mobile Styles */}
@@ -123,7 +119,7 @@ const HeroSection = () => {
         
         /* Custom underscore cursor for TypeAnimation */
         .react-type-animation-cursor {
-          color: #FFD700;
+          color: white;
           animation: blink 1.2s infinite;
         }
 
