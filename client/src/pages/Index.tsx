@@ -12,6 +12,7 @@ import StorySection from '@/components/StorySection';
 import ScrollTriggeredTimeline from '@/components/ScrollTriggeredTimeline';
 import VenueSection from '@/components/VenueSection';
 import DressCodeSection from '@/components/DressCodeSection';
+import UnpluggedCeremonySection from '@/components/UnpluggedCeremonySection';
 import HashtagGiftsSection from '@/components/HashtagGiftsSection';
 import RSVPSection from '@/components/RSVPSection';
 import EntourageSection from '@/components/EntourageSection';
@@ -117,6 +118,7 @@ const Index = () => {
             alt="Gards & Mj Wedding Cover Image 2"
           />
           <DressCodeSection />
+          <UnpluggedCeremonySection />
           <HashtagGiftsSection />
           <RSVPSection />
           <EntourageSection />
