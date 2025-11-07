@@ -167,6 +167,45 @@
       opacity: 0.8;
     }
   }
+
+  @keyframes fallGlitter {
+    0% {
+      transform: translateY(-100vh) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  .glitter-particle {
+    position: absolute;
+    top: -10px;
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    animation: fallGlitter linear infinite;
+    pointer-events: none;
+  }
+
+  .glitter-particle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.6) 0%, transparent 70%);
+    border-radius: 50%;
+  }
 }
 
 /* Responsive clip-path variables for story images */
