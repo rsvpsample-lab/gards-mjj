@@ -7,14 +7,13 @@ import heroImage2 from '@assets/2_1762508400571.jpg';
 import heroImage3 from '@assets/3_1762508400573.jpg';
 import heroImage4 from '@assets/4_1762508400573.jpg';
 import heroImage5 from '@assets/5_1762508400574.jpg';
-import heroImage6 from '@assets/6_1762508400574.jpg';
 
 const HeroSection = () => {
   const [showElements, setShowElements] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { animationsEnabled } = useAnimationContext();
 
-  const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5, heroImage6];
+  const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5];
 
   useEffect(() => {
     const interval = setInterval(() => {
