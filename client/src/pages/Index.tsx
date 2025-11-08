@@ -2,8 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
-import MusicConsentPopup from '@/components/MusicConsentPopup';
-// Cover images and video from attached assets
 import cover1Image from '@assets/cover1_1762419093421.jpg';
 import cover2Image from '@assets/cover2_1762419093422.jpg';
 import cover3Image from '@assets/cover3_1762419093423.jpg';
@@ -26,32 +24,21 @@ import { AnimationContext } from '@/contexts/AnimationContext';
 
 const Index = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [showMusicConsent, setShowMusicConsent] = useState(true);
   const [animationsEnabled, setAnimationsEnabled] = useState(false);
 
-  // Handle music consent
-  const handleMusicConsent = async (consent: boolean) => {
-    setShowMusicConsent(false);
-    setAnimationsEnabled(true);
-    if (consent && audioRef.current) {
-      try {
-        await audioRef.current.play();
-      } catch (error) {
-        console.error('Music play failed:', error);
-      }
-    }
-  };
-
-  // Ensure audio is properly initialized
   useEffect(() => {
+    setAnimationsEnabled(true);
+    
     if (audioRef.current) {
       const audio = audioRef.current;
       audio.volume = 0.3;
       audio.loop = true;
 
-      // Handle audio loading
       const handleCanPlay = () => {
         console.log('Audio is ready to play');
+        audio.play().catch((error) => {
+          console.error('Auto-play failed:', error);
+        });
       };
 
       const handleError = (e: Event) => {
@@ -65,6 +52,12 @@ const Index = () => {
       audio.addEventListener('canplay', handleCanPlay);
       audio.addEventListener('error', handleError);
       audio.addEventListener('loadeddata', handleLoadedData);
+
+      if (audio.readyState >= 3) {
+        audio.play().catch((error) => {
+          console.error('Auto-play failed:', error);
+        });
+      }
 
       return () => {
         audio.removeEventListener('canplay', handleCanPlay);
@@ -94,12 +87,6 @@ const Index = () => {
 
       <div className="min-h-screen relative">
         <Navigation />
-
-        {/* Music Consent Popup */}
-        <MusicConsentPopup 
-          onConsent={handleMusicConsent} 
-          isVisible={showMusicConsent}
-        />
 
         {/* Main Content Sections */}
         <main className="relative z-10">
