@@ -2,18 +2,19 @@ import { TypeAnimation } from 'react-type-animation';
 import { useState, useEffect } from 'react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
 import { ChevronDown } from 'lucide-react';
-import heroImage1 from '@assets/hero-section_1762419093424.jpg';
-import heroImage2 from '@assets/2_1762508400571.jpg';
-import heroImage3 from '@assets/3_1762508400573.jpg';
-import heroImage4 from '@assets/4_1762508400573.jpg';
-import heroImage5 from '@assets/5_1762508400574.jpg';
+import heroImage1 from '@assets/1 best prenup_1762572100819.jpg';
+import heroImage2 from '@assets/2 - best pic_1762572100820.jpg';
+import heroImage3 from '@assets/3_-_best_pic_1762572100820.jpg';
+import heroImage4 from '@assets/4 - best pic_1762572100821.JPG';
+import heroImage5 from '@assets/5 - best pic_1762572100822.JPG';
+import heroImage6 from '@assets/6_-_best_pic_1762572100824.jpg';
 
 const HeroSection = () => {
   const [showElements, setShowElements] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const { animationsEnabled } = useAnimationContext();
 
-  const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5];
+  const heroImages = [heroImage1, heroImage2, heroImage3, heroImage4, heroImage5, heroImage6];
 
   useEffect(() => {
     const interval = setInterval(() => {
