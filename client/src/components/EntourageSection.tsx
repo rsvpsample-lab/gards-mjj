@@ -26,6 +26,18 @@ const EntourageSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 8.8 }}
         >
+          {/* Best Man and Maid of Honor - 2 COLUMNS */}
+          <div className="grid grid-cols-2 gap-x-8">
+            <div data-testid="section-best-man">
+              <h3 className="font-display italic text-lg text-[hsl(var(--gold))] mb-4">Best Man</h3>
+              <p className="text-black font-normal text-xs">Jim Paolo Verzosa</p>
+            </div>
+            <div data-testid="section-maid-of-honor">
+              <h3 className="font-display italic text-lg text-[hsl(var(--gold))] mb-4">Maid of Honor</h3>
+              <p className="text-black font-normal text-xs">Mary Ann Bacay</p>
+            </div>
+          </div>
+
           {/* Secondary Sponsors - 3 COLUMNS */}
           <div>
             <h3 className="font-display italic text-lg text-[hsl(var(--gold))] mb-4" data-testid="heading-secondary-sponsors">Secondary Sponsors</h3>
