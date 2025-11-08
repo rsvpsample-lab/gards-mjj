@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useLocation } from 'wouter';
-import envelopeImage from '@assets/image-removebg-preview (5)_1762572810675.png';
+import envelopeImage from '@assets/7a7e36e2-b156-4b15-b8cb-2b8c6516d9fc-removebg-preview_1762573270050.png';
 import { Button } from '@/components/ui/button';
 
 const LandingPage = () => {
