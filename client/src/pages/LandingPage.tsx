@@ -7,6 +7,8 @@ const LandingPage = () => {
   const [, setLocation] = useLocation();
 
   const handleOpenInvitation = () => {
+    // Set flag to indicate user gesture for audio playback (iOS Safari requirement)
+    sessionStorage.setItem('playMusic', 'true');
     setLocation('/invitation');
   };
 

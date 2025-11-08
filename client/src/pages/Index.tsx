@@ -34,11 +34,21 @@ const Index = () => {
       audio.volume = 0.3;
       audio.loop = true;
 
-      const handleCanPlay = () => {
-        console.log('Audio is ready to play');
+      // Check if user came from landing page (has user gesture)
+      const shouldPlayMusic = sessionStorage.getItem('playMusic') === 'true';
+      
+      const tryPlayAudio = () => {
         audio.play().catch((error) => {
           console.error('Auto-play failed:', error);
         });
+      };
+
+      const handleCanPlay = () => {
+        console.log('Audio is ready to play');
+        if (shouldPlayMusic) {
+          tryPlayAudio();
+          sessionStorage.removeItem('playMusic'); // Clean up flag
+        }
       };
 
       const handleError = (e: Event) => {
@@ -53,10 +63,10 @@ const Index = () => {
       audio.addEventListener('error', handleError);
       audio.addEventListener('loadeddata', handleLoadedData);
 
-      if (audio.readyState >= 3) {
-        audio.play().catch((error) => {
-          console.error('Auto-play failed:', error);
-        });
+      // Try to play immediately if audio is already loaded and flag is set
+      if (audio.readyState >= 3 && shouldPlayMusic) {
+        tryPlayAudio();
+        sessionStorage.removeItem('playMusic'); // Clean up flag
       }
 
       return () => {
