@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
@@ -21,80 +21,18 @@ import CoverSection from '@/components/CoverSection';
 import InvitationRevealSection from '@/components/InvitationRevealSection';
 import MusicControl from '@/components/MusicControl';
 import { AnimationContext } from '@/contexts/AnimationContext';
+import { useAudio } from '@/contexts/AudioContext';
 
 const Index = () => {
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const { audioRef } = useAudio();
   const [animationsEnabled, setAnimationsEnabled] = useState(false);
 
   useEffect(() => {
     setAnimationsEnabled(true);
-    
-    if (audioRef.current) {
-      const audio = audioRef.current;
-      audio.volume = 0.3;
-      audio.loop = true;
-
-      // Check if user came from landing page (has user gesture)
-      const shouldPlayMusic = sessionStorage.getItem('playMusic') === 'true';
-      
-      const tryPlayAudio = () => {
-        audio.play().catch((error) => {
-          console.error('Auto-play failed:', error);
-        });
-      };
-
-      const handleCanPlay = () => {
-        console.log('Audio is ready to play');
-        if (shouldPlayMusic) {
-          tryPlayAudio();
-          sessionStorage.removeItem('playMusic'); // Clean up flag
-        }
-      };
-
-      const handleError = (e: Event) => {
-        console.error('Audio loading error:', e);
-      };
-
-      const handleLoadedData = () => {
-        console.log('Audio data loaded successfully');
-      };
-
-      audio.addEventListener('canplay', handleCanPlay);
-      audio.addEventListener('error', handleError);
-      audio.addEventListener('loadeddata', handleLoadedData);
-
-      // Try to play immediately if audio is already loaded and flag is set
-      if (audio.readyState >= 3 && shouldPlayMusic) {
-        tryPlayAudio();
-        sessionStorage.removeItem('playMusic'); // Clean up flag
-      }
-
-      return () => {
-        audio.removeEventListener('canplay', handleCanPlay);
-        audio.removeEventListener('error', handleError);
-        audio.removeEventListener('loadeddata', handleLoadedData);
-      };
-    }
   }, []);
 
   return (
     <AnimationContext.Provider value={{ animationsEnabled }}>
-      {/* Background Music - Always present */}
-      <audio
-        ref={audioRef}
-        loop
-        preload="auto"
-        crossOrigin="anonymous"
-        style={{ display: 'none' }}
-        data-testid="background-audio"
-      >
-        <source
-          src="https://res.cloudinary.com/dsicpzepi/video/upload/v1762510143/ytmp3free.cc_elliot-james-reay-i-think-they-call-this-love-official-music-video-youtubemp3free.org_g8pdoi.mp3"
-          type="audio/mpeg"
-        />
-        Your browser does not support the audio element.
-      </audio>
-
       <div className="min-h-screen relative">
         <Navigation />
 

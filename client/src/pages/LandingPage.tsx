@@ -2,13 +2,20 @@ import { motion } from 'framer-motion';
 import { useLocation } from 'wouter';
 import envelopeImage from '@assets/7a7e36e2-b156-4b15-b8cb-2b8c6516d9fc-removebg-preview_1762573270050.png';
 import { Button } from '@/components/ui/button';
+import { useAudio } from '@/contexts/AudioContext';
 
 const LandingPage = () => {
   const [, setLocation] = useLocation();
+  const { audioRef } = useAudio();
 
   const handleOpenInvitation = () => {
-    // Set flag to indicate user gesture for audio playback (iOS Safari requirement)
-    sessionStorage.setItem('playMusic', 'true');
+    // Start playing audio immediately on user gesture
+    if (audioRef.current) {
+      audioRef.current.volume = 0.3;
+      audioRef.current.play().catch((error) => {
+        console.error('Failed to start audio playback:', error);
+      });
+    }
     setLocation('/invitation');
   };
 
